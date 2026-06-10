@@ -1,0 +1,6 @@
+# Ignore everything at the top level
+/*
+
+# But keep the docs folder and this file
+!/docs/
+!/.gitignore

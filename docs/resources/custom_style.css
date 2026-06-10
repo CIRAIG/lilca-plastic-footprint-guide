@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+:root {
+  /* crg accents */
+  --primary: #006f9f;
+  --orange-crg: #fa961e;
+  --teal-crg: #00a1c0;
+  --green-crg: #0bac43;
+  --red-crg: #b91e32;
+  --yellow-crg: #fdda64;
+  --dark-blue-crg: #005379;
+  --clear-teal-crg: rgba(0, 161, 192, 0.2);
+  --clear-red-crg: rgba(185, 30, 50, 0.2);
+  --clear-orange-crg: rgba(250, 150, 30, 0.2);
+  --clear-green-crg: rgba(11, 172, 67, 0.2);
+  --muted: #222222;
+  --color-1: #0bac43; /* green */
+  --color-2: #7ac142; /* yellow-green */
+  --color-3: #fa961e; /* orange */
+  --color-4: #e55c2b; /* reddish-orange */
+  --color-5: #b91e32; /* red */
+  --text-light: #fff;
+  --text-dark: #111;
+  --font-size-root: 18px;
+}
+
+body {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+
+.sidebar-title {
+  color: #222222;
+}
+
+.sidebar-scrolling {
+  overflow-y: hidden !important;
+}
+
+div.sidebar-item-container .active {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+/* Non-active tabs */
+.nav-tabs .nav-link {
+  color: #595959;
+  font-size: 1.15em;
+  vertical-align: middle;
+}
+
+/* Change color of the active tab */
+.nav-tabs .nav-link.active {
+  color: var(--primary) !important;
+  font-size: 1.15em;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+.sidebar nav[role="doc-toc"] ul > li > a:hover,
+.sidebar nav[role="doc-toc"] ul > li > ul > li > a:hover {
+  color: var(--primary) !important;
+}
+
+.sidebar nav[role="doc-toc"] ul > li > a.active,
+.sidebar nav[role="doc-toc"] ul > li > ul > li > a.active {
+  font-weight: bold;
+  color: var(--primary) !important;
+  border-left: 1px solid var(--primary) !important;
+}
+
+code {
+  color: var(--dark-blue-crg);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+a:hover {
+  color: var(--green-crg);
+}
+
+.important-text {
+  font-size: 1.15em;
+  vertical-align: middle;
+}
+
+.nav-footer {
+  color: #343a40;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e6e6e6;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  font-size: 0.9rem;
+}
+
+div.callout-note.callout {
+  border-left-color: var(--teal-crg) !important;
+}
+
+div.callout-tip.callout {
+  border-left-color: var(--green-crg) !important;
+}
+
+.nav-page a:hover {
+  color: var(--primary) !important;
+}
+
+/*Specific elements*/
+
+/* Specific table styling */
+.table-uncertainty-sensitivity {
+  width: 100%;
+  border-collapse: collapse;
+  margin: clamp(8px, 2vw, 20px) 0;
+}
+
+/* Column sizing via colgroup (optional – some browsers ignore it for styling) */
+.table-uncertainty-sensitivity colgroup col:nth-child(1) {
+  width: 40%;
+}
+.table-uncertainty-sensitivity colgroup col:nth-child(2) {
+  width: 20%;
+}
+.table-uncertainty-sensitivity colgroup col:nth-child(3) {
+  width: 40%;
+}
+
+/* Text alignment per column */
+.table-uncertainty-sensitivity tr td:nth-child(1),
+.table-uncertainty-sensitivity tr th:nth-child(1) {
+  text-align: right;
+}
+
+.table-uncertainty-sensitivity tr td:nth-child(2),
+.table-uncertainty-sensitivity tr th:nth-child(2) {
+  text-align: center;
+}
+
+.table-uncertainty-sensitivity tr td:nth-child(3),
+.table-uncertainty-sensitivity tr th:nth-child(3) {
+  text-align: left;
+}
+
+/* Row hover effect for better readability */
+.table-uncertainty-sensitivity tbody tr:hover {
+  background: #f5faff;
+}
+
+/* Pedigree matrix */
+.table-pedigree {
+  font-size: 0.8em !important;
+}
+
+.table-pedigree thead th {
+  border: 1px solid #bbb;
+  padding: 0.5em;
+  background: #f9f9f9;
+  text-align: center;
+}
+.table-pedigree thead th:first-child {
+  text-align: left;
+  background: #f9f9f9;
+}
+
+.table-pedigree tbody td {
+  border: 1px solid #bbb;
+  padding: 0.75em 0.5em;
+  vertical-align: top;
+  line-height: 1.3;
+}
+
+.table-pedigree tbody td:first-child {
+  background: #f9f9f9;
+  text-align: left;
+}
+
+/* Hover colors for columns 2-6 */
+.table-pedigree tbody tr td:nth-child(2):hover {
+  background-color: var(--color-1);
+  color: var(--text-light);
+}
+.table-pedigree tbody tr td:nth-child(3):hover {
+  background-color: var(--color-2);
+  color: var(--text-dark);
+}
+.table-pedigree tbody tr td:nth-child(4):hover {
+  background-color: var(--color-3);
+  color: var(--text-light);
+}
+.table-pedigree tbody tr td:nth-child(5):hover {
+  background-color: var(--color-4);
+  color: var(--text-light);
+}
+.table-pedigree tbody tr td:nth-child(6):hover {
+  background-color: var(--color-5);
+  color: var(--text-light);
+}
+
+/*Instructions to hover over diagrams */
+/* Intro line */
+.lead {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+.icon {
+  font-size: 22px;
+  line-height: 1;
+  vertical-align: middle;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+/*.mermaid */
+.mermaid-custom {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
