@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; How to use the novel CFs in your LCAs – Assessing Plastic Impacts in Life Cycle Assessment: A Practitioner’s Guide</title>
+<title>3&nbsp; Using CFs to assess potential biodiversity impacts of plastic emissions in your LCAs – Assessing Plastic Impacts in Life Cycle Assessment: A Practitioner’s Guide</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="libs/quarto-nav/quarto-nav.js"></script>
@@ -45,6 +64,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="libs/bootstrap/bootstrap.min.js"></script>
 <link href="libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="libs/bootstrap/bootstrap-1c9137b7b1c0320e377730bf2be1742e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -87,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03_applying-cfs-in-lca.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">How to use the novel CFs in your LCAs</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03_applying-cfs-in-lca.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Using CFs to assess potential biodiversity impacts of plastic emissions in your LCAs</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -144,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./03_applying-cfs-in-lca.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">How to use the novel CFs in your LCAs</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Using CFs to assess potential biodiversity impacts of plastic emissions in your LCAs</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -176,15 +198,46 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introducing-the-illustrative-example" id="toc-introducing-the-illustrative-example" class="nav-link active" data-scroll-target="#introducing-the-illustrative-example"><span class="header-section-number">3.1</span> Introducing the illustrative example</a></li>
+  <li><a href="#life-cycle-inventory-for-the-foreground-system" id="toc-life-cycle-inventory-for-the-foreground-system" class="nav-link" data-scroll-target="#life-cycle-inventory-for-the-foreground-system"><span class="header-section-number">3.2</span> Life cycle inventory for the foreground system</a>
+  <ul>
+  <li><a href="#processes-and-materials" id="toc-processes-and-materials" class="nav-link" data-scroll-target="#processes-and-materials"><span class="header-section-number">3.2.1</span> Processes and materials</a></li>
+  <li><a href="#geographical-location" id="toc-geographical-location" class="nav-link" data-scroll-target="#geographical-location"><span class="header-section-number">3.2.2</span> Geographical location</a></li>
+  <li><a href="#quantities" id="toc-quantities" class="nav-link" data-scroll-target="#quantities"><span class="header-section-number">3.2.3</span> Quantities</a></li>
+  <li><a href="#environmental-compartment" id="toc-environmental-compartment" class="nav-link" data-scroll-target="#environmental-compartment"><span class="header-section-number">3.2.4</span> Environmental compartment</a></li>
+  <li><a href="#fragmentation" id="toc-fragmentation" class="nav-link" data-scroll-target="#fragmentation"><span class="header-section-number">3.2.5</span> Fragmentation</a></li>
+  <li><a href="#shape" id="toc-shape" class="nav-link" data-scroll-target="#shape"><span class="header-section-number">3.2.6</span> Shape</a></li>
+  <li><a href="#size" id="toc-size" class="nav-link" data-scroll-target="#size"><span class="header-section-number">3.2.7</span> Size</a></li>
+  <li><a href="#limits-of-the-inventory-of-plastic-emissions" id="toc-limits-of-the-inventory-of-plastic-emissions" class="nav-link" data-scroll-target="#limits-of-the-inventory-of-plastic-emissions"><span class="header-section-number">3.2.8</span> Limits of the inventory of plastic emissions</a></li>
+  </ul></li>
+  <li><a href="#life-cycle-impact-assessment-lcia" id="toc-life-cycle-impact-assessment-lcia" class="nav-link" data-scroll-target="#life-cycle-impact-assessment-lcia"><span class="header-section-number">3.3</span> Life cycle impact assessment (LCIA)</a>
+  <ul>
+  <li><a href="#physical-effects-on-biota" id="toc-physical-effects-on-biota" class="nav-link" data-scroll-target="#physical-effects-on-biota"><span class="header-section-number">3.3.1</span> Physical effects on biota</a>
+  <ul>
+  <li><a href="#units-for-various-modeling-frameworks-and-lcia-methodologies" id="toc-units-for-various-modeling-frameworks-and-lcia-methodologies" class="nav-link" data-scroll-target="#units-for-various-modeling-frameworks-and-lcia-methodologies"><span class="header-section-number">3.3.1.1</span> Units for various modeling frameworks and LCIA methodologies</a></li>
+  <li><a href="#limits-of-the-model" id="toc-limits-of-the-model" class="nav-link" data-scroll-target="#limits-of-the-model"><span class="header-section-number">3.3.1.2</span> Limits of the model</a></li>
+  </ul></li>
+  <li><a href="#limits-of-the-impact-assessment-of-plastic-emissions" id="toc-limits-of-the-impact-assessment-of-plastic-emissions" class="nav-link" data-scroll-target="#limits-of-the-impact-assessment-of-plastic-emissions"><span class="header-section-number">3.3.2</span> Limits of the impact assessment of plastic emissions</a></li>
+  <li><a href="#other-considerations-for-the-impact-assessment-of-plastic-products" id="toc-other-considerations-for-the-impact-assessment-of-plastic-products" class="nav-link" data-scroll-target="#other-considerations-for-the-impact-assessment-of-plastic-products"><span class="header-section-number">3.3.3</span> Other considerations for the impact assessment of plastic products</a></li>
+  </ul></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation"><span class="header-section-number">3.4</span> Interpretation</a>
+  <ul>
+  <li><a href="#analyzing-the-results-midpoint-damage" id="toc-analyzing-the-results-midpoint-damage" class="nav-link" data-scroll-target="#analyzing-the-results-midpoint-damage"><span class="header-section-number">3.4.1</span> Analyzing the results (midpoint, damage)</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-using-cfs" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">How to use the novel CFs in your LCAs</span></span></h1>
+<h1 class="title"><span id="sec-using-cfs" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Using CFs to assess potential biodiversity impacts of plastic emissions in your LCAs</span></span></h1>
 </div>
 
 
@@ -201,8 +254,1820 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>The following sections, designed as a step-by-step procedure, will allow practitioners to fully understand and apply the CFs for plastic emissions presented in this guide.</p>
+<section id="introducing-the-illustrative-example" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="introducing-the-illustrative-example"><span class="header-section-number">3.1</span> Introducing the illustrative example</h2>
+<p>To exemplify the complete process, this section uses a continuous example. In this example, a comparative LCA is conducted to assess the environmental performance of five drinking containers used in quick-service restaurant (QSR) settings:</p>
+<ol type="1">
+<li>Reusable ceramic mug provided by the QSR</li>
+<li>Reusable polypropylene cup provided by the QSR</li>
+<li>Reusable polypropylene travel container brought by the customer</li>
+<li>Single-use PLA-lined paper cup provided by the QSR</li>
+<li>Single-use PE-lined paper cup provided by the QSR</li>
+</ol>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span><strong>Functional unit</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To allow the consumption of a single medium-sized cold beverage (~355 ml) in QSR in Toronto, Ontario, Canada in 2025.</p>
+</div>
+</div>
+</section>
+<section id="life-cycle-inventory-for-the-foreground-system" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="life-cycle-inventory-for-the-foreground-system"><span class="header-section-number">3.2</span> Life cycle inventory for the foreground system</h2>
+<section id="processes-and-materials" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="processes-and-materials"><span class="header-section-number">3.2.1</span> Processes and materials</h3>
+<p>As a first step in your assessment, the processes in which emissions of plastic pieces or particles can occur must be identified. Here, the focus should be on the foreground system, for reasons mentioned in the previous sections. The processes typically associated with plastic leakage are likely to be similar to the modules identified in the PFN or the PLP. For all types of plastic products, emissions are indeed likely to occur during plastic granulate manufacturing, road transportation with tire abrasion and end-of-life management, including littering. Some processes also concern specific sectors. This applies, for example, to the washing of garments and textiles during the use stage, where microfibers are emitted to wastewater. The same reasoning applies to the fishing industry, which can lose fishing gear at sea, and agricultural practices involving mulch films.</p>
+<p>For end-of-life processes, it is also important to highlight that leakage could occur via multiple pathways. Littered, uncollected and improperly disposed waste may all end up in natural environments but differ greatly in proportions. Also, waste can be suboptimally managed without necessarily leaking totally to the environment. This distinction is relevant and justifies the need for a precise identification of processes involved in the targeted systems during the assessment. Some plastic emissions can also originate from waste exports. Indeed, waste mismanagement that occurs once exported waste lands in a country with inefficient waste management infrastructure also could be taken into consideration. This is the case for many high-income countries that export a significant fraction of their plastic waste to low or middle-income countries that rely on poor waste management schemes.</p>
+<p>The identification of the processes involved in the plastic emissions should allow practitioners to also identify the polymer composition of the emissions, which constitutes relevant information since CFs for physical effects on biota are available per polymer (e.g.&nbsp;PET, HDPE and PP) or material (e.g.&nbsp;cotton and viscose). This composition of emissions is directly related to the composition of the materials assessed. Therefore, when conducting the environmental assessment of a PET food container, for example, the emissions will be constituted of PET.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Continuous example: identifying emitting processes
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In the example, four processes across the product systems can be identified as potentially emitting plastics to the environment. The distinction between container parts was made at the client’s specific request: the client wanted to discern whether the potential environmental impacts could be lowered by targeting specific sub-parts, such as lids or secondary packaging. <a href="#tbl-emitting-processes" class="quarto-xref">Table&nbsp;<span>3.1</span></a> lists all the processes likely to emit plastics, together with the material composition of the emissions.</p>
+<div class="cell">
+<div id="tbl-emitting-processes" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-emitting-processes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.1: Materials emitted at end-of-life, by system and container part. A dash indicates the part is absent from that system.
+</figcaption>
+<div aria-describedby="tbl-emitting-processes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 45%">
+<col style="width: 14%">
+<col style="width: 9%">
+<col style="width: 5%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">System</th>
+<th style="text-align: left;">Cup body</th>
+<th style="text-align: left;">Handle</th>
+<th style="text-align: left;">Lid</th>
+<th style="text-align: left;">Secondary packaging</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1. Reusable ceramic mug</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2. Reusable PP cup, QSR</td>
+<td style="text-align: left;">PP</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3. Reusable PP container, customer</td>
+<td style="text-align: left;">PP</td>
+<td style="text-align: left;">PP</td>
+<td style="text-align: left;">PP</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4. Single-use PLA-lined cup</td>
+<td style="text-align: left;">PLA liner</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">PS</td>
+<td style="text-align: left;">LDPE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5. Single-use LDPE-lined cup</td>
+<td style="text-align: left;">LDPE liner</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">PS</td>
+<td style="text-align: left;">LDPE</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Note that only end-of-life (EoL) emissions are considered in this example. Transport and manufacturing processes can also lead to plastic emissions.</p>
+</blockquote>
+</div>
+</div>
+</div>
+</section>
+<section id="geographical-location" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="geographical-location"><span class="header-section-number">3.2.2</span> Geographical location</h3>
+<p>The geographic location of emission is a key parameter, as the physical fate and effects of MIP on biota are regionalized. CFs are therefore available for the following regions: Africa &amp; Middle East, Central Asia, Europe, Latin America, North America, Northern Regions, Oceania, Southeast Asia, and a default World region (<a href="#tbl-regions" class="quarto-xref">Table&nbsp;<span>3.2</span></a> provides a full listing of available regions). Regional differentiation accounts for parameters such as rainfall rate, water body depth and area, species richness, area fraction, and runoff, all of which influence the environmental fate and ultimate impact of MIP.</p>
+<p>Practitioners should therefore identify the geographic region in which the processes and activities under study occur, as this determines which regional CF values to apply. For instance, road transport activities taking place during distribution stages in North America should be characterized using the North America CF values. The same logic applies to manufacturing processes, which may represent another source of MIP emissions and can occur across multiple regions within a single product system. When the location of emission cannot be determined, the World region should be used as the default.</p>
+<div class="cell">
+<div id="tbl-regions" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-regions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.2: Regions for which regionalized CFs are available.
+</figcaption>
+<div aria-describedby="tbl-regions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Available regions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Africa &amp; Middle East</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Central Asia</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Europe</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Latin America</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">North America</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Northern Regions</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Oceania</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Southeast Asia</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">World (default)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section id="quantities" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="quantities"><span class="header-section-number">3.2.3</span> Quantities</h3>
+<p>Following the identification of processes involved in plastic emissions throughout the life cycle of the product system under study, the quantification of these processes must be undertaken. The data used for this purpose may be labelled as emission factors, loss rates, leakage rates, or release rates, and communicate the quantity of plastic (expressed as mass) emitted by a process per unit of activity or per unit of material, for example. Note that mass is currently the designated metric of interest for quantifying plastic emissions. Particle count is also recognized as an important metric in MIP science, particularly for toxicity assessment <span class="citation" data-cites="thorntonhampton2022">(<a href="references.html#ref-thorntonhampton2022" role="doc-biblioref">Thornton Hampton et al. 2022</a>)</span>; however, mass remains the only unit used in the LCA field to date. Accordingly, any data expressed in particle numbers must be converted to mass using information on particle size and density before use in an LCA context. <span class="citation" data-cites="lavoie2022">Lavoie et al. (<a href="references.html#ref-lavoie2022" role="doc-biblioref">2022</a>)</span> and <span class="citation" data-cites="besseling2019">Besseling et al. (<a href="references.html#ref-besseling2019" role="doc-biblioref">2019</a>)</span> provide worked examples of such conversions.</p>
+<p>Various conventions are used throughout the scientific and industrial literature to express quantities of emitted plastics. Emission factors are frequently expressed as percentages or fractions, representing the proportion of a plastic material considered to be emitted to the environment, but may also be expressed as a mass of plastic per unit of process or activity. Some of the variation observed in units and terminology is attributable to differences in what is being quantified. For instance, in the dataset published by the Plastic Footprint Network (PFN; <span class="citation" data-cites="plastic2023"><em>Plastic Footprint Guidelines</em> (<a href="references.html#ref-plastic2023" role="doc-biblioref">2023</a>)</span>), <strong>loss rates</strong> quantify direct emissions, whereas <strong>release rates</strong> quantify emissions reaching specific environmental compartments following release and subsequent redistribution; whether through natural processes (e.g., transport of MIP from freshwater to oceans via currents) or human interventions (e.g., wastewater treatment). It is therefore essential for practitioners to carefully examine what each data source is expressing and quantifying before use.</p>
+<div class="cell">
+<div id="tbl-emission-factors" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-emission-factors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.3: Examples of units and labels used to communicate emission factors for various processes.
+</figcaption>
+<div aria-describedby="tbl-emission-factors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 7%">
+<col style="width: 25%">
+<col style="width: 17%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Process/activity</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Unit</th>
+<th style="text-align: left;">Label</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Agricultural films (macro &amp; micro)</td>
+<td style="text-align: left;">2.63 ± 0.62</td>
+<td style="text-align: left;">%</td>
+<td style="text-align: left;">Emission factor</td>
+<td style="text-align: left;"><span class="citation" data-cites="jiang2025">Jiang and Nowack (<a href="references.html#ref-jiang2025" role="doc-biblioref">2025</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Plastic pellet production (micro)</td>
+<td style="text-align: left;">0.01</td>
+<td style="text-align: left;">%</td>
+<td style="text-align: left;">Loss rate</td>
+<td style="text-align: left;">PFN <span class="citation" data-cites="plastic2023">(<a href="references.html#ref-plastic2023" role="doc-biblioref"><em>Plastic Footprint Guidelines</em> 2023</a>)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">End-of-life of plastic packaging (macro)</td>
+<td style="text-align: left;">0.025</td>
+<td style="text-align: left;">%</td>
+<td style="text-align: left;">Marine litter contribution</td>
+<td style="text-align: left;"><span class="citation" data-cites="scagnetti2022">(<a href="references.html#ref-scagnetti2022" role="doc-biblioref">Scagnetti and Lorenz 2022</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">T-shirt laundering (micro)</td>
+<td style="text-align: left;">69.8</td>
+<td style="text-align: left;">mg microfiber / kg garment / wash cycle</td>
+<td style="text-align: left;">Loss rate</td>
+<td style="text-align: left;">PFN <span class="citation" data-cites="plastic2023">(<a href="references.html#ref-plastic2023" role="doc-biblioref"><em>Plastic Footprint Guidelines</em> 2023</a>)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">T-shirt laundering to oceans in Canada<sup>a</sup> (micro)</td>
+<td style="text-align: left;">21.6</td>
+<td style="text-align: left;">mg microfiber / kg garment / wash cycle</td>
+<td style="text-align: left;">Leakage rate to oceans</td>
+<td style="text-align: left;">PFN <span class="citation" data-cites="plastic2023">(<a href="references.html#ref-plastic2023" role="doc-biblioref"><em>Plastic Footprint Guidelines</em> 2023</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Tire abrasion for heavy-duty transport of goods (micro)</td>
+<td style="text-align: left;">380</td>
+<td style="text-align: left;">mg / vehicle·km</td>
+<td style="text-align: left;">Loss rate</td>
+<td style="text-align: left;">PFN <span class="citation" data-cites="plastic2023">(<a href="references.html#ref-plastic2023" role="doc-biblioref"><em>Plastic Footprint Guidelines</em> 2023</a>)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p><sup>a</sup> Emissions to oceans from a t-shirt wash cycle in Canada are calculated by multiplying the reported loss rate (LR) and release rate (RR<sub>ocean</sub>).</p>
+<p>A related and critical issue concerns the risk of double-counting fate when estimating quantities of plastic emissions to natural environments. As noted above, emission factors are intended to represent the mass of plastic emitted to the environment at the point of release. In certain methodological frameworks, however; including the PFN <span class="citation" data-cites="plastic2023">(<a href="references.html#ref-plastic2023" role="doc-biblioref"><em>Plastic Footprint Guidelines</em> 2023</a>)</span> and the Plastic Leak Project (PLP; <span class="citation" data-cites="peano2020">Peano et al. (<a href="references.html#ref-peano2020" role="doc-biblioref">2020</a>)</span>); additional redistribution rates are provided to account for the subsequent transport of particles between environmental compartments. This creates an inconsistency when these data are combined with CFs for <em>physical effects on biota</em>, since those CFs already fully account for the fate of MIP once released to natural compartments. Practitioners drawing on both of these data sources and the <em>physical effects on biota</em> CFs must therefore ensure that only emission values; and not any further redistribution rates; are carried forward into the impact assessment. <a href="#fig-pfn-consistency" class="quarto-xref">Figure&nbsp;<span>3.1</span></a> illustrates this distinction using an excerpt from the PFN <span class="citation" data-cites="plastic2023">(<a href="references.html#ref-plastic2023" role="doc-biblioref"><em>Plastic Footprint Guidelines</em> 2023</a>)</span> data tables, and identifies which values should be extracted when working with <em>physical effects on biota</em> CFs.</p>
+<div id="fig-pfn-consistency" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pfn-consistency-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./resources/figures/consistency_factors_pfn_CFs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;3.1: Consistency of factors provided by the PFN [@plastic2023], as an example of the proper data to use in alignment with physical effects on biota CFs."><img src="./resources/figures/consistency_factors_pfn_CFs.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pfn-consistency-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.1: Consistency of factors provided by the PFN <span class="citation" data-cites="plastic2023">(<a href="references.html#ref-plastic2023" role="doc-biblioref"><em>Plastic Footprint Guidelines</em> 2023</a>)</span>, as an example of the proper data to use in alignment with <em>physical effects on biota</em> CFs.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span><strong>Continuous example: emission factors and emitted quantities</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The following tables provide the emission factors (<a href="#tbl-ce-emission-factors" class="quarto-xref">Table&nbsp;<span>3.4</span></a>) and emitted quantities (<a href="#tbl-ce-emitted-quantities" class="quarto-xref">Table&nbsp;<span>3.5</span></a>) for each identified process and system in the continuous example. The emitted quantities were calculated from the plastic content (mass, in kg) of each process and system. For example, in system 4 the cup body is made of cardboard lined with a thin layer of PLA weighing 1.14 g; multiplying this by the emission factor of 0.6% for the end-of-life of such a product in Canada gives an emitted quantity of 6.87 µg. Full calculation details are provided in the <code>Continuous example.xlsx</code> file included as supplementary fnformation.</p>
+<div class="cell">
+<div id="tbl-ce-emission-factors" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ce-emission-factors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.4: Emission factors for each container part at end-of-life, by system. A dash indicates the part is absent from that system.
+</figcaption>
+<div aria-describedby="tbl-ce-emission-factors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 45%">
+<col style="width: 11%">
+<col style="width: 9%">
+<col style="width: 7%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">System</th>
+<th style="text-align: left;">Cup body</th>
+<th style="text-align: left;">Handle</th>
+<th style="text-align: left;">Lid</th>
+<th style="text-align: left;">Secondary packaging</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1. Reusable ceramic mug</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2. Reusable PP cup, QSR</td>
+<td style="text-align: left;">0.41%</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3. Reusable PP container, customer</td>
+<td style="text-align: left;">0.41%</td>
+<td style="text-align: left;">0.41%</td>
+<td style="text-align: left;">0.41%</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4. Single-use PLA-lined cup</td>
+<td style="text-align: left;">0.60%</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">0.60%</td>
+<td style="text-align: left;">0.60%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5. Single-use LDPE-lined cup</td>
+<td style="text-align: left;">0.60%</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">0.60%</td>
+<td style="text-align: left;">0.60%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-ce-emitted-quantities" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ce-emitted-quantities-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.5: Emitted quantities (kg) for each container part at end-of-life, by system. An dash indicates the part is absent from that system.
+</figcaption>
+<div aria-describedby="tbl-ce-emitted-quantities-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 42%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">System</th>
+<th style="text-align: left;">Cup body</th>
+<th style="text-align: left;">Handle</th>
+<th style="text-align: left;">Lid</th>
+<th style="text-align: left;">Secondary packaging</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1. Reusable ceramic mug</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2. Reusable PP cup, QSR</td>
+<td style="text-align: left;">1.48e-03</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3. Reusable PP container, customer</td>
+<td style="text-align: left;">6.16e-04</td>
+<td style="text-align: left;">6.16e-05</td>
+<td style="text-align: left;">1.23e-04</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4. Single-use PLA-lined cup</td>
+<td style="text-align: left;">6.87e-06</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">2.13e-05</td>
+<td style="text-align: left;">7.56e-07</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5. Single-use LDPE-lined cup</td>
+<td style="text-align: left;">5.14e-06</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">1.79e-05</td>
+<td style="text-align: left;">7.56e-07</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="environmental-compartment" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="environmental-compartment"><span class="header-section-number">3.2.4</span> Environmental compartment</h3>
+<p>CFs for MIP are compartment-dependent and are available for the following emission compartments: air, agricultural soil, lake water, natural soil, river water, and sea water (see <a href="#tbl-compartment-assignment" class="quarto-xref">Table&nbsp;<span>3.6</span></a>). In practice, the receiving compartment may be straightforward to identify for some processes but difficult to determine precisely for others.</p>
+<p>Precise compartment assignment requires detailed information on where plastic emissions occur and, where relevant, how leaked plastic is transported before reaching the receiving environment. This level of detail is often unavailable to practitioners. Ideally, activity-specific leakage models would provide this information in the same way that LCI datasets provide elementary flows for a wide range of substances and activities. However, plastic emissions are not yet systematically represented in these data sources. For now, practitioners therefore need to rely on complementary data sources and transparent assumptions.</p>
+<p>At the time of writing, the most useful source of information on this matter is the PFN technical modules and accompanying spreadsheets. These include partial pre-fate allocation through release rates, which indicate the share of leaked plastic assigned to different receiving compartments. In the PFN data sheets used for this guide, the granularity and completeness of release rates vary by sector.</p>
+<p>For example, in the Macroplastic: Packaging spreadsheet, the “Leaked to Ocean and Waterways” column provides country-specific release rates for a combined marine and freshwater compartment. This helps estimate releases to aquatic environments but does not distinguish between sea water, river water, and lake water, and therefore does not allow direct selection of the most specific CF. The same spreadsheet provides additional generic release rates for ocean and land, depending on the size of the emitted plastic item and its residual value. Larger items and items with higher residual value are associated with lower release rates. These release rates may not sum to 100%, because the remaining fraction is assumed to be removed, for example, through waste picking or municipal cleaning operations.</p>
+<p>As a pragmatic default, we recommend first using the mismanaged fraction per country and then applying the generic release rates for ocean and land from the lower table to allocate the emitted fraction between continental sea water and continental natural soil, respectively. Alternatively, practitioners may assume that the “Leaked to Ocean and Waterways” fraction is emitted to sea water and that the remaining emitted fraction is released to land, represented here as natural soil. This simplified allocation should be documented, and fractions assumed to be removed or cleaned should not be characterized as emissions.</p>
+<p>For MIP emissions from textile production and use, emissions to land should be assigned to agricultural soil, since the release pathway occurs via sewage sludge spreading on agricultural fields. Recommendations on compartment assignment are provided in <a href="#tbl-compartment-assignment" class="quarto-xref">Table&nbsp;<span>3.6</span></a>.</p>
+<p>For MIP emissions from tire abrasion, we strongly recommend using the specific CFs available in <span class="citation" data-cites="saadi2026">Saadi and Boulay (<a href="references.html#ref-saadi2026" role="doc-biblioref">2026</a>)</span> where applicable, as these incorporate a weighting based on the likelihood of emissions reaching different natural compartments at the continental scale. Further parameterization is possible using PFN data to adapt the emission distribution according to watershed size and the share of driving occurring in rural, urban, and highway contexts. Because updates to the PFN methodology and data are expected, these recommendations should be revisited when new versions become available.</p>
+<div class="cell">
+<div id="tbl-compartment-assignment" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-compartment-assignment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.6: Recommended alignment between PFN release compartments and the available CFs, by sector.
+</figcaption>
+<div aria-describedby="tbl-compartment-assignment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 39%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Sheet in the PFN data (sector)</th>
+<th style="text-align: left;">Release compartment provided by PFN data</th>
+<th style="text-align: left;">Recommended alignment with CFs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Macro (Packaging)</td>
+<td style="text-align: left;">Leaked to Oceans and Waterways</td>
+<td style="text-align: left;">Continental sea water surface</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Ocean</td>
+<td style="text-align: left;">Continental sea water surface</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Land</td>
+<td style="text-align: left;">Continental natural soil</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Macro (Textile)</td>
+<td style="text-align: left;">Ocean</td>
+<td style="text-align: left;">Continental sea water surface</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Land</td>
+<td style="text-align: left;">Continental natural soil</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Micro (Textile)</td>
+<td style="text-align: left;">Ocean</td>
+<td style="text-align: left;">Continental sea water surface</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Land</td>
+<td style="text-align: left;">Continental agricultural soil</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Freshwater</td>
+<td style="text-align: left;">Continental river water</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Soil</td>
+<td style="text-align: left;">Continental agricultural soil</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Terrestrial environment</td>
+<td style="text-align: left;">Continental natural soil</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Micro (Tyres)</td>
+<td style="text-align: left;">Ocean</td>
+<td style="text-align: left;">Continental sea water surface</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Land</td>
+<td style="text-align: left;">Continental natural soil</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Freshwater</td>
+<td style="text-align: left;">Continental river water</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Soil</td>
+<td style="text-align: left;">Continental natural soil</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Air</td>
+<td style="text-align: left;">Continental air</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Other terrestrial compartments</td>
+<td style="text-align: left;">Continental natural soil</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>For compartments represented in the fate model in both continental and global versions, emissions should by default be assigned to the continental compartment. This recommendation may be revised when process-specific information justifies an alternative assignment. For instance, emissions from fishing operations conducted in open ocean waters may appropriately be allocated to the global sea water compartment. In any case, CF values between continental and global versions of a given compartment are expected to differ only marginally and are unlikely to materially affect assessment results.</p>
+<p>It is also possible to assess the potential environmental impacts of MIP on specific ecosystems, which may be relevant for practitioners whose scope focuses on particular receiving environments, such as marine ecosystems. The approach described above aggregates impact contributions across terrestrial, freshwater, and marine ecosystems, providing a comprehensive view of <em>Ecosystem Quality</em> impacts associated with the activities under study.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Continuous example: release to environmental compartments
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In this step of the assessment, release rates are used to identify what fraction of the mass is emitted to which environmental compartment. In the example, release rates of 15% and 85% are used for ocean and land, respectively, following the PFN data <span class="citation" data-cites="plastic2023">(<a href="references.html#ref-plastic2023" role="doc-biblioref"><em>Plastic Footprint Guidelines</em> 2023</a>)</span> for medium-sized plastic items of medium residual value. Multiplying these values by the emitted quantities gives an emitted mass for each compartment.</p>
+<div class="cell">
+<div id="tbl-release-rates-ocean" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-release-rates-ocean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.7: Release rates to the ocean compartment, by container part and system. A dash indicates the part is absent from that system.
+</figcaption>
+<div aria-describedby="tbl-release-rates-ocean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 46%">
+<col style="width: 12%">
+<col style="width: 9%">
+<col style="width: 5%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">System</th>
+<th style="text-align: left;">Cup body</th>
+<th style="text-align: left;">Handle</th>
+<th style="text-align: left;">Lid</th>
+<th style="text-align: left;">Secondary packaging</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1. Reusable ceramic mug</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2. Reusable PP cup, QSR</td>
+<td style="text-align: left;">15%</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3. Reusable PP container, customer</td>
+<td style="text-align: left;">15%</td>
+<td style="text-align: left;">15%</td>
+<td style="text-align: left;">15%</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4. Single-use PLA-lined cup</td>
+<td style="text-align: left;">15%</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">15%</td>
+<td style="text-align: left;">15%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5. Single-use LDPE-lined cup</td>
+<td style="text-align: left;">15%</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">15%</td>
+<td style="text-align: left;">15%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-release-rates-land" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-release-rates-land-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.8: Release rates to the land compartment, by container part and system. A dash indicates the part is absent from that system.
+</figcaption>
+<div aria-describedby="tbl-release-rates-land-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 46%">
+<col style="width: 12%">
+<col style="width: 9%">
+<col style="width: 5%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">System</th>
+<th style="text-align: left;">Cup body</th>
+<th style="text-align: left;">Handle</th>
+<th style="text-align: left;">Lid</th>
+<th style="text-align: left;">Secondary packaging</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1. Reusable ceramic mug</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2. Reusable PP cup, QSR</td>
+<td style="text-align: left;">85%</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3. Reusable PP container, customer</td>
+<td style="text-align: left;">85%</td>
+<td style="text-align: left;">85%</td>
+<td style="text-align: left;">85%</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4. Single-use PLA-lined cup</td>
+<td style="text-align: left;">85%</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">85%</td>
+<td style="text-align: left;">85%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5. Single-use LDPE-lined cup</td>
+<td style="text-align: left;">85%</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">85%</td>
+<td style="text-align: left;">85%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="fragmentation" class="level3" data-number="3.2.5">
+<h3 data-number="3.2.5" class="anchored" data-anchor-id="fragmentation"><span class="header-section-number">3.2.5</span> Fragmentation</h3>
+<p>For many of the emitting processes identified previously, the plastic emissions will take the form of MAPs. Yet CFs for <em>physical effects on biota</em> are only available for micro-sized plastic emissions. Secondary plastics, which originate from microplastic fragmentation, are nevertheless thought to be the most abundant form of microplastics, more so than primary microplastics manufactured as such <span class="citation" data-cites="mutuku2024">(<a href="references.html#ref-mutuku2024" role="doc-biblioref">Mutuku et al. 2024</a>)</span>. This means that MAPs undergo significant fragmentation under the forces encountered in the environment. It is therefore generally accepted that a significant proportion of the MAPs that end up in natural environments will fragment over time, especially over long time horizons.</p>
+<p>On this matter, a few recommendations can be put forward, based on a peer-reviewed degradation and fragmentation model (Tang et al., <em>submitted</em>). The idea is simply to use a percentage value (%) to represent the proportion of MAP emissions that will fragment and should thus be characterized using the CFs for <em>physical effects on biota</em>. These fragmentation percentages vary by material type (i.e.&nbsp;rigid or flexible) and emission compartment (i.e.&nbsp;topsoil, beach, or water surface). The rationale is that a flexible material likely has a larger surface-area-to-volume ratio than a rigid polymer, making it more susceptible to fragmentation. As for emission compartments, UV intensity and mechanical forces influence the fragmentation observed, and thus the variable rates across compartments. <a href="#tbl-fragmentation" class="quarto-xref">Table&nbsp;<span>3.9</span></a> summarizes the recommendations for the various contexts.</p>
+<div class="cell">
+<div id="tbl-fragmentation" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-fragmentation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.9: Recommended fragmentation rates by material type and emission compartment.
+</figcaption>
+<div aria-describedby="tbl-fragmentation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Material type</th>
+<th style="text-align: left;">Emission compartment</th>
+<th style="text-align: left;">Fragmentation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Rigid</td>
+<td style="text-align: left;">Topsoil</td>
+<td style="text-align: left;">1%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Beach</td>
+<td style="text-align: left;">60%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Water surface</td>
+<td style="text-align: left;">3%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Flexible</td>
+<td style="text-align: left;">Topsoil</td>
+<td style="text-align: left;">90%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Beach</td>
+<td style="text-align: left;">100%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Water surface</td>
+<td style="text-align: left;">100%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Additionally, the remaining fraction of plastic that is not assumed to fragment cannot be characterized using the <em>physical effects on biota</em> CFs and should therefore remain uncharacterized, in the absence of pertinent indicators expressing its potential contribution to damages on biodiversity.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span><strong>Continuous example: fragmentation</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>For the fragmentation step, the idea is to assign a fragmentation rate to each process, based on the rigidity of the material and the conditions of the compartment where the emission occurs, following the provided table. For this example, emissions are considered to occur in either the water surface or the topsoil compartment, for the fractions emitted to oceans and land, respectively. Among the cup bodies, handles, and lids, reusable options are treated as rigid because they are generally thicker, while single-use options are treated as flexible because they are generally thinner. Secondary packaging is always flexible. The following tables give the fragmentation rates applied to emissions reaching the water surface and topsoil.</p>
+<div class="cell">
+<div id="tbl-frag-ws" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-frag-ws-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.10: Fragmentation rates applied to emissions reaching the water surface, by container part and system. A dash indicates the part is absent from that system.
+</figcaption>
+<div aria-describedby="tbl-frag-ws-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 46%">
+<col style="width: 12%">
+<col style="width: 9%">
+<col style="width: 5%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">System</th>
+<th style="text-align: left;">Cup body</th>
+<th style="text-align: left;">Handle</th>
+<th style="text-align: left;">Lid</th>
+<th style="text-align: left;">Secondary packaging</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1. Reusable ceramic mug</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2. Reusable PP cup, QSR</td>
+<td style="text-align: left;">3%</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3. Reusable PP container, customer</td>
+<td style="text-align: left;">3%</td>
+<td style="text-align: left;">3%</td>
+<td style="text-align: left;">3%</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4. Single-use PLA-lined cup</td>
+<td style="text-align: left;">100%</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">3%</td>
+<td style="text-align: left;">100%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5. Single-use LDPE-lined cup</td>
+<td style="text-align: left;">100%</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">3%</td>
+<td style="text-align: left;">100%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-frag-topsoil" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-frag-topsoil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.11: Fragmentation rates applied to emissions reaching the topsoil, by container part and system. A dash indicates the part is absent from that system.
+</figcaption>
+<div aria-describedby="tbl-frag-topsoil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 46%">
+<col style="width: 12%">
+<col style="width: 9%">
+<col style="width: 5%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">System</th>
+<th style="text-align: left;">Cup body</th>
+<th style="text-align: left;">Handle</th>
+<th style="text-align: left;">Lid</th>
+<th style="text-align: left;">Secondary packaging</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1. Reusable ceramic mug</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2. Reusable PP cup, QSR</td>
+<td style="text-align: left;">1%</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3. Reusable PP container, customer</td>
+<td style="text-align: left;">1%</td>
+<td style="text-align: left;">1%</td>
+<td style="text-align: left;">1%</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4. Single-use PLA-lined cup</td>
+<td style="text-align: left;">90%</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">1%</td>
+<td style="text-align: left;">90%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5. Single-use LDPE-lined cup</td>
+<td style="text-align: left;">90%</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">1%</td>
+<td style="text-align: left;">90%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="shape" class="level3" data-number="3.2.6">
+<h3 data-number="3.2.6" class="anchored" data-anchor-id="shape"><span class="header-section-number">3.2.6</span> Shape</h3>
+<p>The shape of emitted particles is generally determined by the type of product. Detailed recommendations on this matter, drawn from <span class="citation" data-cites="corella-puertas2023">Corella-Puertas et al. (<a href="references.html#ref-corella-puertas2023" role="doc-biblioref">2023</a>)</span>, are provided in this guide and summarized in <a href="#tbl-shape" class="quarto-xref">Table&nbsp;<span>3.12</span></a>. Briefly: fragments from film-like materials (wrappings, bags, etc.) should be characterized as film fragments; particles from fiber-containing materials (textiles, ropes, etc.) should be treated as fibers; and particles originating from foams or foam-like materials, as well as microbeads, should be considered spherical. For particles of unknown or unspecified shape, the default assumption is also spherical; a choice supported by evidence that plastic fragmentation tends to produce increasingly rounded particles over time <span class="citation" data-cites="alkema2022">(<a href="references.html#ref-alkema2022" role="doc-biblioref">Alkema et al. 2022</a>)</span>.</p>
+<div class="cell">
+<div id="tbl-shape" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-shape-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.12: Recommended particle shape by product type, after <span class="citation" data-cites="corella-puertas2023">Corella-Puertas et al. (<a href="references.html#ref-corella-puertas2023" role="doc-biblioref">2023</a>)</span>.
+</figcaption>
+<div aria-describedby="tbl-shape-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Type of product</th>
+<th style="text-align: left;">Shape</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Wrappings, bags, and other film-like materials</td>
+<td style="text-align: left;">Film</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Textiles, ropes, and other fiber-containing MAPs</td>
+<td style="text-align: left;">Fiber</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Foam and microbeads</td>
+<td style="text-align: left;">Sphere</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Unspecified, unknown, default</td>
+<td style="text-align: left;">Sphere</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Continuous example: shape
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>For this step, practitioners define a particle shape based on the product type under study. In the continuous example, reusable containers fragment into unspecified-shape particles, which are considered spherical given the recommendations provided in this section. For single-use containers, which are thinner and film-like, the fragmented MIPs take the shape of film. For secondary packaging, since the material is an LDPE film, the MIPs likewise take the shape of film. <a href="#tbl-ce-shape" class="quarto-xref">Table&nbsp;<span>3.13</span></a> summarizes the results.</p>
+<div class="cell">
+<div id="tbl-ce-shape" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ce-shape-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.13: Particle shape assigned to each container part, by system. A dash indicates the part is absent from that system.
+</figcaption>
+<div aria-describedby="tbl-ce-shape-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 44%">
+<col style="width: 11%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">System</th>
+<th style="text-align: left;">Cup body</th>
+<th style="text-align: left;">Handle</th>
+<th style="text-align: left;">Lid</th>
+<th style="text-align: left;">Secondary packaging</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1. Reusable ceramic mug</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2. Reusable PP cup, QSR</td>
+<td style="text-align: left;">Sphere</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3. Reusable PP container, customer</td>
+<td style="text-align: left;">Sphere</td>
+<td style="text-align: left;">Sphere</td>
+<td style="text-align: left;">Sphere</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4. Single-use PLA-lined cup</td>
+<td style="text-align: left;">Film</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Film</td>
+<td style="text-align: left;">Film</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5. Single-use LDPE-lined cup</td>
+<td style="text-align: left;">Film</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Film</td>
+<td style="text-align: left;">Film</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="size" class="level3" data-number="3.2.7">
+<h3 data-number="3.2.7" class="anchored" data-anchor-id="size"><span class="header-section-number">3.2.7</span> Size</h3>
+<p>CFs expressing damage to biodiversity from MIP emissions span up to 6 orders of magnitude across the 1–5000 µm size range. Particle size is therefore a critical parameter in LCA assessments, as the choice of size class can significantly influence results. For primary MIP; particles manufactured and released directly at the micro scale; size characterization is generally straightforward, as their dimensions are defined at the point of production and should be known to the practitioner.</p>
+<p>Fragmentation breaks larger plastic pieces into smaller debris, which can eventually become part of what is referred to as micro- or nano-plastics (&lt; 5 mm). The size distribution of microplastics after fragmentation from macro-sized litter is deeply uncertain. Because CFs can vary by up to 6 orders of magnitude depending on emitted particle size <span class="citation" data-cites="louvet2026">(<a href="references.html#ref-louvet2026" role="doc-biblioref">Louvet et al. 2026</a>)</span>, this information is crucial for precisely and rigorously assessing the potential damages on biodiversity caused by emissions of plastic litter in natural environments.</p>
+<p>In this context, several avenues may shed light on the matter. Based on the commonness of microplastic sizes found in the environment and in industry, <span class="citation" data-cites="corella-puertas2023">Corella-Puertas et al. (<a href="references.html#ref-corella-puertas2023" role="doc-biblioref">2023</a>)</span> proposes default sizes for the various shapes of microplastics. For generic plastic materials (MAPs) (e.g.&nbsp;buoys, kettles, and toys) that must be characterized as microplastics in order to use the <em>physical effects on biota</em> CFs, the recommended size class is 1000 µm or 5000 µm, since large particles will likely dominate the fragmented mass during the early stages of fragmentation <span class="citation" data-cites="egger2020">(<a href="references.html#ref-egger2020" role="doc-biblioref">Egger et al. 2020</a>)</span>; <span class="citation" data-cites="kaandorp2021">Kaandorp et al. (<a href="references.html#ref-kaandorp2021" role="doc-biblioref">2021</a>)</span>; <span class="citation" data-cites="ueda2025">Ueda et al. (<a href="references.html#ref-ueda2025" role="doc-biblioref">2025</a>)</span>]. This also matches the recommendations of <span class="citation" data-cites="corella-puertas2023">Corella-Puertas et al. (<a href="references.html#ref-corella-puertas2023" role="doc-biblioref">2023</a>)</span> for fragments of unspecified shape. <a href="#tbl-size" class="quarto-xref">Table&nbsp;<span>3.14</span></a> lays out this information.</p>
+<div class="cell">
+<div id="tbl-size" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-size-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.14: Recommended default particle size by shape.
+</figcaption>
+<div aria-describedby="tbl-size-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 24%">
+<col style="width: 57%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Shape</th>
+<th style="text-align: left;">Default size recommended</th>
+<th style="text-align: left;">Sources</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Sphere, beads</td>
+<td style="text-align: left;">1000 µm</td>
+<td style="text-align: left;"><span class="citation" data-cites="castillo2016 firdaus2020 mohamednor2014 zhang2020">(<a href="references.html#ref-castillo2016" role="doc-biblioref">Castillo et al. 2016</a>; <a href="references.html#ref-firdaus2020" role="doc-biblioref">Firdaus et al. 2020</a>; <a href="references.html#ref-mohamednor2014" role="doc-biblioref">Mohamed Nor and Obbard 2014</a>; <a href="references.html#ref-zhang2020" role="doc-biblioref">Zhang et al. 2020</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fibers, cylinders</td>
+<td style="text-align: left;">10 µm</td>
+<td style="text-align: left;"><span class="citation" data-cites="dreillard2022 geyer2022 kim2021 pinlova2023">(<a href="references.html#ref-dreillard2022" role="doc-biblioref">Dreillard et al. 2022</a>; <a href="references.html#ref-geyer2022" role="doc-biblioref">Geyer et al. 2022</a>; <a href="references.html#ref-kim2021" role="doc-biblioref">Kim et al. 2021</a>; <a href="references.html#ref-pinlova2023" role="doc-biblioref">Pinlova and Nowack 2023</a>)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Film fragments</td>
+<td style="text-align: left;">100 µm</td>
+<td style="text-align: left;"><span class="citation" data-cites="kalogerakis2017">(<a href="references.html#ref-kalogerakis2017" role="doc-biblioref">Kalogerakis et al. 2017</a>)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Unspecified shape</td>
+<td style="text-align: left;">1000–5000 µm</td>
+<td style="text-align: left;"><span class="citation" data-cites="egger2020 kaandorp2021 ueda2025">(<a href="references.html#ref-egger2020" role="doc-biblioref">Egger et al. 2020</a>; <a href="references.html#ref-kaandorp2021" role="doc-biblioref">Kaandorp et al. 2021</a>; <a href="references.html#ref-ueda2025" role="doc-biblioref">Ueda et al. 2025</a>)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>For clarity, it should be noted that fiber and film fragment sizes refer to their diameter and thickness, respectively; not to particle length or overall dimensions. These dimensional properties govern environmental fate and therefore constitute the primary characteristics of interest in this analysis. For spheres or unknown-shape fragments, the diameter represents the dimension of interest.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Continuous example: size and final inventory
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>At this stage, the purpose is to associate a particle size with the shapes defined in the previous section, based on the recommendations provided. In this example, spherical particles are assigned a size of 1000 µm and film-shaped particles a size of 100 µm. <a href="#tbl-ce-size" class="quarto-xref">Table&nbsp;<span>3.15</span></a> summarizes the results.</p>
+<div class="cell">
+<div id="tbl-ce-size" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ce-size-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.15: Particle size (µm) assigned to each container part, by system. An dash indicates the part is absent from that system.
+</figcaption>
+<div aria-describedby="tbl-ce-size-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 46%">
+<col style="width: 11%">
+<col style="width: 9%">
+<col style="width: 6%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">System</th>
+<th style="text-align: left;">Cup body</th>
+<th style="text-align: left;">Handle</th>
+<th style="text-align: left;">Lid</th>
+<th style="text-align: left;">Secondary packaging</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1. Reusable ceramic mug</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2. Reusable PP cup, QSR</td>
+<td style="text-align: left;">1000</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3. Reusable PP container, customer</td>
+<td style="text-align: left;">1000</td>
+<td style="text-align: left;">1000</td>
+<td style="text-align: left;">1000</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4. Single-use PLA-lined cup</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">100</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5. Single-use LDPE-lined cup</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">100</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>After all these steps, the practitioner is left with detailed information on the plastic emissions associated with each product’s life cycle. Combining the information developed across the previous steps yields the final life cycle inventory for plastic emissions, shown for the ocean (<a href="#tbl-ce-inventory-ocean" class="quarto-xref">Table&nbsp;<span>3.16</span></a>) and land (<a href="#tbl-ce-inventory-land" class="quarto-xref">Table&nbsp;<span>3.17</span></a>) compartments.</p>
+<div class="cell">
+<div id="tbl-ce-inventory-ocean" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ce-inventory-ocean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.16: Final inventory of fragmented MIP emissions (kg) to the ocean compartment, by container part and system. An dash indicates the part is absent from that system.
+</figcaption>
+<div aria-describedby="tbl-ce-inventory-ocean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 42%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">System</th>
+<th style="text-align: left;">Cup body</th>
+<th style="text-align: left;">Handle</th>
+<th style="text-align: left;">Lid</th>
+<th style="text-align: left;">Secondary packaging</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1. Reusable ceramic mug</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2. Reusable PP cup, QSR</td>
+<td style="text-align: left;">6.65e-06</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3. Reusable PP container, customer</td>
+<td style="text-align: left;">2.77e-06</td>
+<td style="text-align: left;">2.77e-07</td>
+<td style="text-align: left;">5.54e-07</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4. Single-use PLA-lined cup</td>
+<td style="text-align: left;">1.03e-06</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">9.58e-08</td>
+<td style="text-align: left;">1.13e-07</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5. Single-use LDPE-lined cup</td>
+<td style="text-align: left;">7.71e-07</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">8.07e-08</td>
+<td style="text-align: left;">1.13e-07</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-ce-inventory-land" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ce-inventory-land-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.17: Final inventory of fragmented MIP emissions (kg) to the land compartment, by container part and system. An dash indicates the part is absent from that system.
+</figcaption>
+<div aria-describedby="tbl-ce-inventory-land-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 42%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">System</th>
+<th style="text-align: left;">Cup body</th>
+<th style="text-align: left;">Handle</th>
+<th style="text-align: left;">Lid</th>
+<th style="text-align: left;">Secondary packaging</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1. Reusable ceramic mug</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2. Reusable PP cup, QSR</td>
+<td style="text-align: left;">1.26e-05</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3. Reusable PP container, customer</td>
+<td style="text-align: left;">5.23e-06</td>
+<td style="text-align: left;">5.23e-07</td>
+<td style="text-align: left;">1.05e-06</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4. Single-use PLA-lined cup</td>
+<td style="text-align: left;">5.25e-06</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">1.81e-07</td>
+<td style="text-align: left;">5.78e-07</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5. Single-use LDPE-lined cup</td>
+<td style="text-align: left;">3.93e-06</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">1.52e-07</td>
+<td style="text-align: left;">5.78e-07</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="limits-of-the-inventory-of-plastic-emissions" class="level3" data-number="3.2.8">
+<h3 data-number="3.2.8" class="anchored" data-anchor-id="limits-of-the-inventory-of-plastic-emissions"><span class="header-section-number">3.2.8</span> Limits of the inventory of plastic emissions</h3>
+<p>Limits and weaknesses of plastic emission inventories exist and are worth highlighting, since they can significantly influence the results of the assessment. Because CFs for <em>physical effects on biota</em> are quite large, especially for large particle sizes and high-density polymers, a small variation in the quantities of emitted plastics can shift the conclusions of a study.</p>
+<p>Drawing on experience from previous work estimating plastic emissions to natural environments, <strong>the most pressing limit of the inventory concerns the fragmentation of MAPs into secondary microplastics</strong>, which can then be characterized using the <em>physical effects on biota</em> CFs. The wide range of assumptions made on this question in the past; 10%, 50%, and 100% <span class="citation" data-cites="corella-puertas2023 plastic2023">(<a href="references.html#ref-corella-puertas2023" role="doc-biblioref">Corella-Puertas et al. 2023</a>; <a href="references.html#ref-plastic2023" role="doc-biblioref"><em>Plastic Footprint Guidelines</em> 2023</a>)</span>; 0.5% <span class="citation" data-cites="erradhouani2026">(<a href="references.html#ref-erradhouani2026" role="doc-biblioref">Erradhouani et al. 2026</a>)</span>; 100% <span class="citation" data-cites="louvet2026">(<a href="references.html#ref-louvet2026" role="doc-biblioref">Louvet et al. 2026</a>)</span>; and 4%, 12%, and 62% <span class="citation" data-cites="saadi2025">(<a href="references.html#ref-saadi2025" role="doc-biblioref">Saadi et al. 2025</a>)</span>; reveals the substantial unknowns associated with this parameter, especially given the variety of product types, environmental conditions, and polymer chemistries involved. We therefore recommend always including a sensitivity analysis on the value of this parameter.</p>
+<p>A further limitation concerns the focus on the foreground system. Since plastic emission inventories are not currently assessed in LCI databases, background systems will essentially never include plastic emissions, even though in reality many occur in background packaging and oceanic freight activities, for example.</p>
+<p>Most limits faced during the inventory stage will likely originate from data availability. Some sectors may be unable to find accurate and reliable data on the plastic emissions occurring throughout their supply chain. Because data may come from many sources, methodologies and assumptions may also differ, inducing considerable uncertainty in the assessment. Furthermore, obtaining uncertainty estimates (e.g.&nbsp;confidence intervals) for inventory emission factors is mostly impossible given the current state of knowledge in the field.</p>
+<p>Specific limitations are also linked to particular data sources or methodologies. For example, in low-income countries (LICs) and middle-income countries (MICs), open dumps are the de facto treatment for waste disposal. Yet some methodologies, such as the PFN <span class="citation" data-cites="plastic2023">(<a href="references.html#ref-plastic2023" role="doc-biblioref"><em>Plastic Footprint Guidelines</em> 2023</a>)</span> and the PLP <span class="citation" data-cites="peano2020">(<a href="references.html#ref-peano2020" role="doc-biblioref">Peano et al. 2020</a>)</span>, consider this end-of-life treatment as waste mismanagement and apply a 100% leakage to litter taking this path. While there is consensus that open dumps are far from optimal, this approach stands in stark contrast to other scientific studies, which instead suggest leakage rates of 0.04% <span class="citation" data-cites="cottom2024">(<a href="references.html#ref-cottom2024" role="doc-biblioref">Cottom et al. 2024</a>)</span>, 5% <span class="citation" data-cites="schwarz2023">(<a href="references.html#ref-schwarz2023" role="doc-biblioref">Schwarz et al. 2023</a>)</span>, and 25% <span class="citation" data-cites="oecd2022">(<a href="references.html#ref-oecd2022" role="doc-biblioref">OECD 2022</a>)</span>. These values, although widely scattered, all differ significantly from the 100% assumed by the PLP <span class="citation" data-cites="peano2020">(<a href="references.html#ref-peano2020" role="doc-biblioref">Peano et al. 2020</a>)</span> and the PFN <span class="citation" data-cites="plastic2023">(<a href="references.html#ref-plastic2023" role="doc-biblioref"><em>Plastic Footprint Guidelines</em> 2023</a>)</span>.</p>
+<p>Similarly, potential plastic emissions resulting from plastic waste exports are not currently accounted for directly by the emission factors provided in the PFN <span class="citation" data-cites="plastic2023">(<a href="references.html#ref-plastic2023" role="doc-biblioref"><em>Plastic Footprint Guidelines</em> 2023</a>)</span>. The share of plastic waste exported is provided, but linking these exports to specific destination countries and assigning the corresponding emission factors of waste treated there requires additional data and work by the practitioner. Quantifying emissions from plastic waste exports is nonetheless possible. To do so, practitioners can rely on the waste-export shares given in the PFN data for the country where the end-of-life of their product system occurs. Identifying the destination countries would be ideal; alternatively, practitioners may use the average waste-mismanagement percentages for low- and middle-income countries provided in the PLP data, and multiply the two values to estimate the resulting emission factors. The usual release step is then followed as normal to identify the natural compartments where emissions occur.</p>
+<p>The limited transparency of data provided by some initiatives makes it difficult to modify emission factors to reflect the specific context of a study, or to integrate partial data the practitioner may already have; ultimately limiting their control over the quality and representativeness of their assessment.</p>
+<p>On the operational side, practitioners may also face practical limitations in the time needed to account for contributions from <em>physical effects on biota</em>. Since the process described in the previous sections is not yet fully integrated into databases and software the way other impact categories are, additional steps are necessary to incorporate these contributions into the tables and figures communicating the results. This can prove particularly cumbersome when multiple products, scenarios, and sensitivity analyses are carried out over the course of the assessment.</p>
+</section>
+</section>
+<section id="life-cycle-impact-assessment-lcia" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="life-cycle-impact-assessment-lcia"><span class="header-section-number">3.3</span> Life cycle impact assessment (LCIA)</h2>
+<section id="physical-effects-on-biota" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="physical-effects-on-biota"><span class="header-section-number">3.3.1</span> Physical effects on biota</h3>
+<p>The CFs for <em>physical effects on biota</em> express the potential detrimental impacts on species communities associated with emissions of MIP to natural environments. They account for both the potential effects of MIP on exposed organisms and the residence time of MIP in the environmental compartments through which particles may be transported. They are available on two time scales, representing short- and long-term time-horizon perspectives, similar to the <em>Climate change</em> short-term and long-term indicators available in the IMPACT World+ methodology. Following the same approach as <em>Climate change</em>, the short-term <em>physical effects on biota</em> CFs quantify the potential impacts occurring during the 0–100 year time horizon, while the long-term CFs quantify those occurring beyond 100 years.</p>
+<p>As indicated by the name of the impact category, the current CFs account only for physical effects. This reflects the way the effect factors were developed: they rely on ecotoxicological data from experiments using virgin MIP, in order to isolate the physical effects of plastic particles on organisms, without including potential effects from additives or other chemicals present in plastic product matrices <span class="citation" data-cites="lavoie2022 corella-puertas2022 corella-puertas2023 saadi2025 louvet2026 saadi2026">(<a href="references.html#ref-lavoie2022" role="doc-biblioref">Lavoie et al. 2022</a>; <a href="references.html#ref-corella-puertas2022" role="doc-biblioref">Corella-Puertas et al. 2022</a>, <a href="references.html#ref-corella-puertas2023" role="doc-biblioref">2023</a>; <a href="references.html#ref-saadi2025" role="doc-biblioref">Saadi et al. 2025</a>; <a href="references.html#ref-louvet2026" role="doc-biblioref">Louvet et al. 2026</a>; <a href="references.html#ref-saadi2026" role="doc-biblioref">Saadi and Boulay 2026</a>)</span>.</p>
+<p>Chemical substances added to plastic products to modify or enhance their properties, such as additives, are therefore not represented in the <em>physical effects on biota</em> pathway. When relevant, and when sufficient inventory and substance-specific data are available, these chemical contributions should instead be considered through existing ecotoxicity impact pathways. Similarly, the fate modelling focuses on the intrinsic properties of the polymer particles; for example, degradation and fragmentation behaviour; and does not explicitly account for formulation-specific effects such as additional stability induced by additives. <span class="quarto-unresolved-ref">?sec-physical-vs-ecotox</span> discusses the distinction between physical effects on biota and ecotoxicity, and proposes approaches for addressing this issue in practice.</p>
+<p>The physical effects considered in this pathway include entanglement, ingestion, and adherence. These mechanisms may lead to adverse outcomes such as mortality, reduced growth, reduced feeding, or reduced reproduction.</p>
+<p>The CFs are provided for 14 materials, 5 sizes, 4 shapes, 9 environmental compartments, and 2 scales. These are listed in <a href="#tbl-cf-availability" class="quarto-xref">Table&nbsp;<span>3.18</span></a>, and the CFs themselves are available <a href="#">here</a>.</p>
+<div class="cell">
+<div id="tbl-cf-availability" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cf-availability-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.18: Dimensions for which <em>physical effects on biota</em> CFs are available.
+</figcaption>
+<div aria-describedby="tbl-cf-availability-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 80%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Dimension</th>
+<th style="text-align: left;">Available values</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Materials (14)</td>
+<td style="text-align: left;">EPS, PP, LDPE, HDPE, PS, PAN, PHA, PA, PLA, Starch blend, PBAT, PET, PVC, TRWP</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sizes (µm) (5)</td>
+<td style="text-align: left;">1, 10, 100, 1000, 5000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Shapes (4)</td>
+<td style="text-align: left;">Spherical, Fiber, Film, Unspecified</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Environmental compartments (9)</td>
+<td style="text-align: left;">Air; Lake water; River water; Sea water; Lake sediments; River sediments; Sea water sediments; Natural soil; Agricultural soil</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Scales (2)</td>
+<td style="text-align: left;">Continental, Global</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<section id="units-for-various-modeling-frameworks-and-lcia-methodologies" class="level4" data-number="3.3.1.1">
+<h4 data-number="3.3.1.1" class="anchored" data-anchor-id="units-for-various-modeling-frameworks-and-lcia-methodologies"><span class="header-section-number">3.3.1.1</span> Units for various modeling frameworks and LCIA methodologies</h4>
+<p>Various methodologies are available to practitioners for the LCIA step of their assessment. These methodologies combine different models across a number of impact categories and sometimes also imply a series of value choices in their modeling assumptions (e.g.&nbsp;the time horizons considered). LCIA methods are generally either midpoint- or damage-oriented, though some cover both <span class="citation" data-cites="bulle2019">(<a href="references.html#ref-bulle2019" role="doc-biblioref">Bulle et al. 2019</a>)</span>. The <em>physical effects on biota</em> impact category provides CFs at both midpoint and damage levels and is implemented in IMPACT World+ <span class="citation" data-cites="bulle2019">(<a href="references.html#ref-bulle2019" role="doc-biblioref">Bulle et al. 2019</a>)</span>, one of the most widely used LCIA methodologies available. Additionally, to facilitate their integration with diverse LCIA methodologies, the <em>physical effects on biota</em> CFs are provided in different versions, using different units.</p>
+</section>
+<section id="limits-of-the-model" class="level4" data-number="3.3.1.2">
+<h4 data-number="3.3.1.2" class="anchored" data-anchor-id="limits-of-the-model"><span class="header-section-number">3.3.1.2</span> Limits of the model</h4>
+<p>Models are imperfect representations of real-world processes. The modeling involved in the development of the CFs is no exception and thus carries many limitations. One of the main limitations stems from data availability, especially for the polymer degradation rates used in developing the fate factors. Quality experiments are scarce, so obtaining enough data to accurately represent the various mechanisms and environmental stresses that govern degradation rates across the range of existing polymers is a significant challenge given current knowledge <span class="citation" data-cites="tang2026">(<a href="references.html#ref-tang2026" role="doc-biblioref"><strong>tang2026?</strong></a>)</span>.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span><strong>Continuous example: impact assessment</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Following the inventory compiled in the previous section, the LCI results are now translated into LCIA indicator results. The approach is straightforward: the emitted quantities of MIP are multiplied by the appropriate CF, following the usual LCIA procedure. In the continuous example, the final inventories give quantities of emitted MIP for a given polymer, shape, and size, and for two environmental compartments. Each quantity is multiplied by the appropriate CF; at midpoint or damage level, depending on the practitioner’s needs; to obtain its contribution to the impact indicator. The ocean and land scores are then summed to give a final impact score.</p>
+<div class="cell">
+<div id="tbl-lcia-ocean" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lcia-ocean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.19: Impact scores for emissions to the ocean compartment (PDF·m2·yr), by container part and system. A dash indicates the part is absent from that system.
+</figcaption>
+<div aria-describedby="tbl-lcia-ocean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 42%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">System</th>
+<th style="text-align: left;">Cup body</th>
+<th style="text-align: left;">Handle</th>
+<th style="text-align: left;">Lid</th>
+<th style="text-align: left;">Secondary packaging</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1. Reusable ceramic mug</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2. Reusable PP cup, QSR</td>
+<td style="text-align: left;">3.78e-02</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3. Reusable PP container, customer</td>
+<td style="text-align: left;">1.57e-02</td>
+<td style="text-align: left;">1.57e-03</td>
+<td style="text-align: left;">3.15e-03</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4. Single-use PLA-lined cup</td>
+<td style="text-align: left;">5.84e-03</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">5.45e-04</td>
+<td style="text-align: left;">6.42e-04</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5. Single-use LDPE-lined cup</td>
+<td style="text-align: left;">3.20e-03</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">4.60e-04</td>
+<td style="text-align: left;">6.42e-04</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-lcia-land" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lcia-land-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.20: Impact scores for emissions to the land compartment (PDF·m²·yr), by container part and system. A dash indicates the part is absent from that system.
+</figcaption>
+<div aria-describedby="tbl-lcia-land-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 42%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">System</th>
+<th style="text-align: left;">Cup body</th>
+<th style="text-align: left;">Handle</th>
+<th style="text-align: left;">Lid</th>
+<th style="text-align: left;">Secondary packaging</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1. Reusable ceramic mug</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2. Reusable PP cup, QSR</td>
+<td style="text-align: left;">5.16e-02</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3. Reusable PP container, customer</td>
+<td style="text-align: left;">2.15e-02</td>
+<td style="text-align: left;">2.15e-03</td>
+<td style="text-align: left;">4.30e-03</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4. Single-use PLA-lined cup</td>
+<td style="text-align: left;">1.63e-02</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">9.60e-04</td>
+<td style="text-align: left;">1.79e-03</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5. Single-use LDPE-lined cup</td>
+<td style="text-align: left;">2.60e-04</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">8.09e-04</td>
+<td style="text-align: left;">1.79e-03</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-lcia-total" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lcia-total-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.21: Total impact scores (ocean + land, PDF·m²·yr), by container part and system. A dash indicates the part is absent from that system.
+</figcaption>
+<div aria-describedby="tbl-lcia-total-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 42%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">System</th>
+<th style="text-align: left;">Cup body</th>
+<th style="text-align: left;">Handle</th>
+<th style="text-align: left;">Lid</th>
+<th style="text-align: left;">Secondary packaging</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1. Reusable ceramic mug</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2. Reusable PP cup, QSR</td>
+<td style="text-align: left;">8.94e-02</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3. Reusable PP container, customer</td>
+<td style="text-align: left;">3.73e-02</td>
+<td style="text-align: left;">3.73e-03</td>
+<td style="text-align: left;">7.45e-03</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4. Single-use PLA-lined cup</td>
+<td style="text-align: left;">2.21e-02</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">1.51e-03</td>
+<td style="text-align: left;">2.44e-03</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5. Single-use LDPE-lined cup</td>
+<td style="text-align: left;">3.46e-03</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">1.27e-03</td>
+<td style="text-align: left;">2.44e-03</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-lcia-total-fu" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lcia-total-fu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.22: Total impact scores per functional unit (PDF·m2·yr / FU), by container part and system. A dash indicates the part is absent from that system.
+</figcaption>
+<div aria-describedby="tbl-lcia-total-fu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 42%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">System</th>
+<th style="text-align: left;">Cup body</th>
+<th style="text-align: left;">Handle</th>
+<th style="text-align: left;">Lid</th>
+<th style="text-align: left;">Secondary packaging</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1. Reusable ceramic mug</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2. Reusable PP cup, QSR</td>
+<td style="text-align: left;">1.79e-04</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3. Reusable PP container, customer</td>
+<td style="text-align: left;">7.45e-05</td>
+<td style="text-align: left;">7.45e-06</td>
+<td style="text-align: left;">1.49e-05</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4. Single-use PLA-lined cup</td>
+<td style="text-align: left;">2.21e-02</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">1.51e-03</td>
+<td style="text-align: left;">2.44e-03</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5. Single-use LDPE-lined cup</td>
+<td style="text-align: left;">3.46e-03</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">1.27e-03</td>
+<td style="text-align: left;">2.44e-03</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="limits-of-the-impact-assessment-of-plastic-emissions" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="limits-of-the-impact-assessment-of-plastic-emissions"><span class="header-section-number">3.3.2</span> Limits of the impact assessment of plastic emissions</h3>
+<p>Models are incomplete representations of reality and therefore carry numerous limitations. For the impact assessment of plastic emissions specifically, several can be identified. First, the <em>physical effects on biota</em> CFs are for now only available for MIP-sized plastic particles. Combined with the uncertainty surrounding environmental fragmentation processes and the absence of CFs for MAP, this means that significant fractions of the plastic litter emitted to the environment may go unaccounted for at the impact assessment step. This results in a systematic underestimation of impacts and creates a mass-balance inconsistency: the total mass of plastic recorded in the life cycle inventory is not fully characterized at the impact assessment level, as MAPs are effectively assigned a zero-impact weight by default.</p>
+<p>Second, current model assumptions focus on the <em>physical effects on biota</em>, which, as the impact category name suggests, are limited to the physical effects on organisms. This implies that plastic pieces leaking to the environment are assumed to be composed of 100% polymer chains, rather than a mix of polymer and the chemical additives that complement the functionality of real plastic products on the market. This is a significant shortcoming, since it means the chemical toxicity of such substances; and of other components such as un-polymerized monomers; is currently unaccounted for. This may, however, matter less than it sounds for the impact assessment of plastic litter, because the relative mass of potential additives currently treated as polymer material may not be as harmful to ecosystems as is often assumed <span class="citation" data-cites="lavoie2022 corella-puertas2023 louvet2026">(<a href="references.html#ref-lavoie2022" role="doc-biblioref">Lavoie et al. 2022</a>; <a href="references.html#ref-corella-puertas2023" role="doc-biblioref">Corella-Puertas et al. 2023</a>; <a href="references.html#ref-louvet2026" role="doc-biblioref">Louvet et al. 2026</a>)</span>.</p>
+<p>Third, regarding the modeling of the <em>physical effects on biota</em>, many limitations are reported in the papers describing the development of the model’s various components. They include, but are not limited to: (1) the use of a single generic effect factor to represent the physical effect of particles ranging from 0.001 µm to 5000 µm in all aquatic compartments, even though different sizes induce different levels of toxicity per kg of emissions <span class="citation" data-cites="thorntonhampton2022 bobori2022">(<a href="references.html#ref-thorntonhampton2022" role="doc-biblioref">Thornton Hampton et al. 2022</a>; <a href="references.html#ref-bobori2022" role="doc-biblioref">Bobori et al. 2022</a>)</span> and impacts may vary with the species communities of different ecosystems; and (2) the lack of a consistent degradation model across all polymers and compartments, which can distort the residence time of MIP considered in the fate factors <span class="citation" data-cites="louvet2026">(<a href="references.html#ref-louvet2026" role="doc-biblioref">Louvet et al. 2026</a>)</span>.</p>
+<p>Finally, it is crucial to remember that the cause-effect chains developed so far address only the potential damages on biodiversity (<em>Ecosystem Quality</em> area of protection) generated by ingestion, adherence, entanglement, and other physical effects. Yet it is widely acknowledged that plastic emissions also have detrimental consequences for human health (<em>Human Health</em> area of protection) and for resource availability and ecosystem services (<em>Resources and Ecosystem Services</em> area of protection) <span class="citation" data-cites="kumar2021 gabisa2023">(<a href="references.html#ref-kumar2021" role="doc-biblioref">Kumar et al. 2021</a>; <a href="references.html#ref-gabisa2023" role="doc-biblioref">Gabisa et al. 2023</a>)</span>. Further damages on biodiversity are also possible through interactions with other impact categories such as <em>Climate change</em>, as described in <a href="01_background.html#sec-marine-carbon-pump" class="quarto-xref"><span>Section 1.2.4.2</span></a>. The LCA community recognizes this, and the MarILCA framework identifies the development of cause-effect models linking plastic emissions to these endpoints as part of the work ahead <span class="citation" data-cites="woods2021">(<a href="references.html#ref-woods2021" role="doc-biblioref">Woods et al. 2021</a>)</span>. Other impact categories and areas of protection may therefore not reveal any impact contributions from plastic emissions for now, but these are simply hidden, rather than nonexistent.</p>
+</section>
+<section id="other-considerations-for-the-impact-assessment-of-plastic-products" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="other-considerations-for-the-impact-assessment-of-plastic-products"><span class="header-section-number">3.3.3</span> Other considerations for the impact assessment of plastic products</h3>
+<p>In practice, the distinction between the two impact pathways, <em>physical effects on biota</em> and <em>ecotoxicity</em>, is also genuinely important. In most cases, practitioners may not have access to robust data on the additive composition of the plastic products under study, since this information is scarce and barely accessible. In such contexts, the recommendation is to consider the full mass of plastic as virgin (Approach A, <a href="#fig-additive-approaches" class="quarto-xref">Figure&nbsp;<span>3.2</span></a>). This can be seen as a conservative approach, since the impact contributions from the polymer fraction greatly surpass those from additives <span class="citation" data-cites="lecointre2025">(<a href="references.html#ref-lecointre2025" role="doc-biblioref">Lecointre et al. 2025</a>)</span>. When information on additive content <em>is</em> available, separating the polymer and additive fractions and characterizing each independently, using the available CFs for <em>physical effects on biota</em> and <em>ecotoxicity</em>, respectively, is an improved yet still simple way of handling the issue (Approach B, <a href="#fig-additive-approaches" class="quarto-xref">Figure&nbsp;<span>3.2</span></a>). This approach remains imperfect, as it assumes the effect, fate, and exposure of both fractions are independent once the plastic product is emitted to the environment, which is a significant assumption. It is also possible to assess the fate of additives in the polymer matrix more precisely, using tools such as the Food Contact Material tool in USEtox 3.0 (Approach C, <a href="#fig-additive-approaches" class="quarto-xref">Figure&nbsp;<span>3.2</span></a>). This last approach offers a more robust and precise assessment of the fate of additives, but still carries shortcomings such as time constraints and data availability.</p>
+<div id="fig-additive-approaches" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-additive-approaches-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./resources/figures/approaches_additive_content_plastics.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;3.2: Approaches A, B, and C for handling the polymer and additive fractions in the impact assessment of plastic products."><img src="./resources/figures/approaches_additive_content_plastics.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-additive-approaches-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.2: Approaches A, B, and C for handling the polymer and additive fractions in the impact assessment of plastic products.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="interpretation" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="interpretation"><span class="header-section-number">3.4</span> Interpretation</h2>
+<section id="analyzing-the-results-midpoint-damage" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="analyzing-the-results-midpoint-damage"><span class="header-section-number">3.4.1</span> Analyzing the results (midpoint, damage)</h3>
+<p>Key differences in modeling assumptions exist between the <em>physical effects on biota</em> pathway and others, even closely related ones. For example, the treatment of substances that reach the global-scale marine compartment differs between the <em>physical effects on biota</em> model and the USEtox model, which addresses <em>ecotoxicity</em> impacts. The current USEtox 2.14 version treats pollutants as overwhelmingly diluted once they reach this global compartment, and therefore models their fate at the global scale as a removal mechanism from the environment. For MIP, the model was improved: the fate of MIP particles at the global scale is modeled in the same way as at the continental scale, so particles are considered to affect species at this scale too, even though the locations where concentrations can reach potentially toxic levels are extremely rare (in the case of <em>physical effects on biota</em>, outside the near-surface depths around marine gyres, where plastic litter tends to accumulate). This can lead to considerable variation in model outputs.</p>
+<p>Similarly, the time horizons over which impacts are integrated can vary by impact category, which can distort the results; especially for damage-level indicators, which aggregate many inconsistent models into a single value. For example, the USEtox model, used as the consensus approach for the <em>ecotoxicity</em> and <em>human toxicity</em> impact categories, integrates potential impacts until a steady state is reached, which in practice means over an infinite time horizon. For <em>Climate change</em>, impacts are integrated over 100 years (short-term) or 500 years (long-term). These considerable differences generate significant discrepancies in output. Such limitations are present throughout LCIA methodologies and are not specific to the <em>physical effects on biota</em> framework.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-alkema2022" class="csl-entry" role="listitem">
+Alkema, Lise M., Caspar J. Van Lissa, Merel Kooi, and Albert A. Koelmans. 2022. <span>“Maximizing Realism: Mapping Plastic Particles at the Ocean Surface Using Mixtures of Normal Distributions.”</span> <em>Environmental Science &amp; Technology</em> 56 (22): 15552–62. <a href="https://doi.org/10.1021/acs.est.2c03559">https://doi.org/10.1021/acs.est.2c03559</a>.
+</div>
+<div id="ref-besseling2019" class="csl-entry" role="listitem">
+Besseling, Ellen, Paula Redondo-Hasselerharm, Edwin M. Foekema, and Albert A. Koelmans. 2019. <span>“Quantifying Ecological Risks of Aquatic Micro- and Nanoplastic.”</span> <em>Critical Reviews in Environmental Science and Technology</em> 49 (1): 32–80. <a href="https://doi.org/10.1080/10643389.2018.1531688">https://doi.org/10.1080/10643389.2018.1531688</a>.
+</div>
+<div id="ref-bobori2022" class="csl-entry" role="listitem">
+Bobori, Dimitra C., Anastasia Dimitriadi, Konstantinos Feidantsis, et al. 2022. <span>“Differentiation in the Expression of Toxic Effects of Polyethylene-Microplastics on Two Freshwater Fish Species: Size Matters.”</span> <em>Science of The Total Environment</em> 830 (July): 154603. <a href="https://doi.org/10.1016/j.scitotenv.2022.154603">https://doi.org/10.1016/j.scitotenv.2022.154603</a>.
+</div>
+<div id="ref-bulle2019" class="csl-entry" role="listitem">
+Bulle, Cécile, Manuele Margni, Laure Patouillard, et al. 2019. <span>“IMPACT World+: A Globally Regionalized Life Cycle Impact Assessment Method.”</span> <em>The International Journal of Life Cycle Assessment</em> 24 (9): 1653–74. <a href="https://doi.org/10.1007/s11367-019-01583-0">https://doi.org/10.1007/s11367-019-01583-0</a>.
+</div>
+<div id="ref-castillo2016" class="csl-entry" role="listitem">
+Castillo, Azenith B., Ibrahim Al-Maslamani, and Jeffrey Philip Obbard. 2016. <span>“Prevalence of Microplastics in the Marine Waters of Qatar.”</span> <em>Marine Pollution Bulletin</em> 111 (1-2): 260–67. <a href="https://doi.org/10.1016/j.marpolbul.2016.06.108">https://doi.org/10.1016/j.marpolbul.2016.06.108</a>.
+</div>
+<div id="ref-corella-puertas2022" class="csl-entry" role="listitem">
+Corella-Puertas, Elena, Pauline Guieu, Alessio Aufoujal, Cécile Bulle, and Anne-Marie Boulay. 2022. <span>“Development of Simplified Characterization Factors for the Assessment of Expanded Polystyrene and Tire Wear Microplastic Emissions Applied in a Food Container Life Cycle Assessment.”</span> <em>Journal of Industrial Ecology</em> 26 (6): 1882–94. <a href="https://doi.org/10.1111/jiec.13269">https://doi.org/10.1111/jiec.13269</a>.
+</div>
+<div id="ref-corella-puertas2023" class="csl-entry" role="listitem">
+Corella-Puertas, Elena, Carla Hajjar, Jérôme Lavoie, and Anne-Marie Boulay. 2023. <span>“MarILCA Characterization Factors for Microplastic Impacts in Life Cycle Assessment: Physical Effects on Biota from Emissions to Aquatic Environments.”</span> <em>Journal of Cleaner Production</em> 418 (September): 138197. <a href="https://doi.org/10.1016/j.jclepro.2023.138197">https://doi.org/10.1016/j.jclepro.2023.138197</a>.
+</div>
+<div id="ref-cottom2024" class="csl-entry" role="listitem">
+Cottom, Joshua W., Ed Cook, and Costas A. Velis. 2024. <span>“A Local-to-Global Emissions Inventory of Macroplastic Pollution.”</span> <em>Nature</em> 633 (8028): 101–8. <a href="https://doi.org/10.1038/s41586-024-07758-6">https://doi.org/10.1038/s41586-024-07758-6</a>.
+</div>
+<div id="ref-dreillard2022" class="csl-entry" role="listitem">
+Dreillard, Matthieu, Caroline De Faria Barros, Virgile Rouchon, et al. 2022. <span>“Quantification and Morphological Characterization of Microfibers Emitted from Textile Washing.”</span> <em>Science of The Total Environment</em> 832 (August): 154973. <a href="https://doi.org/10.1016/j.scitotenv.2022.154973">https://doi.org/10.1016/j.scitotenv.2022.154973</a>.
+</div>
+<div id="ref-egger2020" class="csl-entry" role="listitem">
+Egger, Matthias, Rein Nijhof, Lauren Quiros, et al. 2020. <span>“A Spatially Variable Scarcity of Floating Microplastics in the Eastern North Pacific Ocean.”</span> <em>Environmental Research Letters</em> 15 (11): 114056. <a href="https://doi.org/10.1088/1748-9326/abbb4f">https://doi.org/10.1088/1748-9326/abbb4f</a>.
+</div>
+<div id="ref-erradhouani2026" class="csl-entry" role="listitem">
+Erradhouani, Bilal, Veronique Coma, Guido Sonnemann, and Philippe Loubet. 2026. <span>“Transition to Bio-Based Plastic Packaging Reveals Complex Climate<span></span>biodiversity Trade-Offs.”</span> <em>Nature Communications</em> 17 (1): 3630. <a href="https://doi.org/10.1038/s41467-026-69016-9">https://doi.org/10.1038/s41467-026-69016-9</a>.
+</div>
+<div id="ref-firdaus2020" class="csl-entry" role="listitem">
+Firdaus, Muhammad, Yulinah Trihadiningrum, and Prieskarinda Lestari. 2020. <span>“Microplastic Pollution in the Sediment of Jagir Estuary, Surabaya City, Indonesia.”</span> <em>Marine Pollution Bulletin</em> 150 (January): 110790. <a href="https://doi.org/10.1016/j.marpolbul.2019.110790">https://doi.org/10.1016/j.marpolbul.2019.110790</a>.
+</div>
+<div id="ref-gabisa2023" class="csl-entry" role="listitem">
+Gabisa, Elias W., Chavalit Ratanatamskul, and Shabbir H. Gheewala. 2023. <span>“Recycling of Plastics as a Strategy to Reduce Life Cycle GHG Emission, Microplastics and Resource Depletion.”</span> <em>Sustainability</em> 15 (15): 11529. <a href="https://doi.org/10.3390/su151511529">https://doi.org/10.3390/su151511529</a>.
+</div>
+<div id="ref-geyer2022" class="csl-entry" role="listitem">
+Geyer, Roland, Jenna Gavigan, Alexis M. Jackson, Vienna R. Saccomanno, Sangwon Suh, and Mary G. Gleason. 2022. <span>“Quantity and Fate of Synthetic Microfiber Emissions from Apparel Washing in California and Strategies for Their Reduction.”</span> <em>Environmental Pollution</em> 298 (April): 118835. <a href="https://doi.org/10.1016/j.envpol.2022.118835">https://doi.org/10.1016/j.envpol.2022.118835</a>.
+</div>
+<div id="ref-jiang2025" class="csl-entry" role="listitem">
+Jiang, Danyang, and Bernd Nowack. 2025. <span>“Reconciling Plastic Release: Comprehensive Modeling of Macro- and Microplastic Flows to the Environment.”</span> <em>Environmental Pollution</em> 383 (October): 126800. <a href="https://doi.org/10.1016/j.envpol.2025.126800">https://doi.org/10.1016/j.envpol.2025.126800</a>.
+</div>
+<div id="ref-kaandorp2021" class="csl-entry" role="listitem">
+Kaandorp, Mikael L A, Henk A Dijkstra, and Erik Van Sebille. 2021. <span>“Modelling Size Distributions of Marine Plastics Under the Influence of Continuous Cascading Fragmentation.”</span> <em>Environmental Research Letters</em> 16 (5): 054075. <a href="https://doi.org/10.1088/1748-9326/abe9ea">https://doi.org/10.1088/1748-9326/abe9ea</a>.
+</div>
+<div id="ref-kalogerakis2017" class="csl-entry" role="listitem">
+Kalogerakis, Nicolas, Katerina Karkanorachaki, G. Calypso Kalogerakis, et al. 2017. <span>“Microplastics Generation: Onset of Fragmentation of Polyethylene Films in Marine Environment Mesocosms.”</span> <em>Frontiers in Marine Science</em> 4 (March). <a href="https://doi.org/10.3389/fmars.2017.00084">https://doi.org/10.3389/fmars.2017.00084</a>.
+</div>
+<div id="ref-kim2021" class="csl-entry" role="listitem">
+Kim, Lia, Sang A. Kim, Tae Hee Kim, Juhea Kim, and Youn-Joo An. 2021. <span>“Synthetic and Natural Microfibers Induce Gut Damage in the Brine Shrimp Artemia Franciscana.”</span> <em>Aquatic Toxicology</em> 232 (March): 105748. <a href="https://doi.org/10.1016/j.aquatox.2021.105748">https://doi.org/10.1016/j.aquatox.2021.105748</a>.
+</div>
+<div id="ref-kumar2021" class="csl-entry" role="listitem">
+Kumar, Rakesh, Anurag Verma, Arkajyoti Shome, et al. 2021. <span>“Impacts of Plastic Pollution on Ecosystem Services, Sustainable Development Goals, and Need to Focus on Circular Economy and Policy Interventions.”</span> <em>Sustainability</em> 13 (17): 9963. <a href="https://doi.org/10.3390/su13179963">https://doi.org/10.3390/su13179963</a>.
+</div>
+<div id="ref-lavoie2022" class="csl-entry" role="listitem">
+Lavoie, Jérôme, Anne-Marie Boulay, and Cécile Bulle. 2022. <span>“Aquatic Micro<span>-</span> and Nano<span>-</span>Plastics in Life Cycle Assessment: Development of an Effect Factor for the Quantification of Their Physical Impact on Biota.”</span> <em>Journal of Industrial Ecology</em> 26 (6): 2123–35. <a href="https://doi.org/10.1111/jiec.13140">https://doi.org/10.1111/jiec.13140</a>.
+</div>
+<div id="ref-lecointre2025" class="csl-entry" role="listitem">
+Lecointre, S., J. Lavoie, Anne-Marie Boulay, and C. Bulle. 2025. <span>“Evaluating the Relative Contribution of Polymers and Chemical Additives in the Environmental Profile of Plastic Items.”</span> (Palermo, Italy).
+</div>
+<div id="ref-louvet2026" class="csl-entry" role="listitem">
+Louvet, Juliette, Joris T. K. Quik, and Anne-Marie Boulay. 2026. <span>“Regionalized Characterization Factors for Microplastic Emissions in Life Cycle Assessment Considering Multimedia Fate Modelling.”</span> <em>Journal of Cleaner Production</em> 538 (January): 147217. <a href="https://doi.org/10.1016/j.jclepro.2025.147217">https://doi.org/10.1016/j.jclepro.2025.147217</a>.
+</div>
+<div id="ref-mohamednor2014" class="csl-entry" role="listitem">
+Mohamed Nor, Nur Hazimah, and Jeffrey Philip Obbard. 2014. <span>“Microplastics in Singapore<span>’</span>s Coastal Mangrove Ecosystems.”</span> <em>Marine Pollution Bulletin</em> 79 (1-2): 278–83. <a href="https://doi.org/10.1016/j.marpolbul.2013.11.025">https://doi.org/10.1016/j.marpolbul.2013.11.025</a>.
+</div>
+<div id="ref-mutuku2024" class="csl-entry" role="listitem">
+Mutuku, Judith, Maria Yanotti, Mark Tocock, and Darla Hatton MacDonald. 2024. <span>“The Abundance of Microplastics in the World<span>’</span>s Oceans: A Systematic Review.”</span> <em>Oceans</em> 5 (3): 398–428. <a href="https://doi.org/10.3390/oceans5030024">https://doi.org/10.3390/oceans5030024</a>.
+</div>
+<div id="ref-oecd2022" class="csl-entry" role="listitem">
+OECD. 2022. <em>Global Plastics Outlook: Economic Drivers, Environmental Impacts and Policy Options</em>. OECD Publishing. <a href="https://doi.org/10.1787/de747aef-en">https://doi.org/10.1787/de747aef-en</a>.
+</div>
+<div id="ref-peano2020" class="csl-entry" role="listitem">
+Peano, L., A. Kounina, V. Magaud, S. Chalumeau, M. Zgola, and J. Boucher. 2020. <em>Plastic Leak Project: Methodological Guidelines</em>.
+</div>
+<div id="ref-pinlova2023" class="csl-entry" role="listitem">
+Pinlova, Barbora, and Bernd Nowack. 2023. <span>“Characterization of Fiber Fragments Released from Polyester Textiles During UV Weathering.”</span> <em>Environmental Pollution</em> 322 (April): 121012. <a href="https://doi.org/10.1016/j.envpol.2023.121012">https://doi.org/10.1016/j.envpol.2023.121012</a>.
+</div>
+<div id="ref-plastic2023" class="csl-entry" role="listitem">
+<em>Plastic Footprint Guidelines</em>. 2023. <a href="http://www.plasticfootprint.earth/">http://www.plasticfootprint.earth/</a>.
+</div>
+<div id="ref-saadi2026" class="csl-entry" role="listitem">
+Saadi, Nadim, and Anne-Marie Boulay. 2026. <span>“Microfibers in Life Cycle Assessment: Comparing the Physical Effects of Cellulosic and Synthetic Fibers via Characterization Factors Development.”</span> <em>Integrated Environmental Assessment and Management</em>, January 10, vjag007. <a href="https://doi.org/10.1093/inteam/vjag007">https://doi.org/10.1093/inteam/vjag007</a>.
+</div>
+<div id="ref-saadi2025" class="csl-entry" role="listitem">
+Saadi, Nadim, Jérôme Lavoie, Peter Fantke, Paula Redondo-Hasselerharm, and Anne-Marie Boulay. 2025. <span>“Including Impacts of Microplastics in Marine Water and Sediments in Life Cycle Assessment.”</span> <em>Journal of Cleaner Production</em> 520 (August): 146037. <a href="https://doi.org/10.1016/j.jclepro.2025.146037">https://doi.org/10.1016/j.jclepro.2025.146037</a>.
+</div>
+<div id="ref-scagnetti2022" class="csl-entry" role="listitem">
+Scagnetti, Carla, and Manuel Lorenz. 2022. <span>“Plastic Leakage of Packaging in Life Cycle Assessment <span></span> a Theoretical Framework.”</span> <em>E3S Web of Conferences</em> 349: 03002. <a href="https://doi.org/10.1051/e3sconf/202234903002">https://doi.org/10.1051/e3sconf/202234903002</a>.
+</div>
+<div id="ref-schwarz2023" class="csl-entry" role="listitem">
+Schwarz, A. E., S. M. C. Lensen, E. Langeveld, L. A. Parker, and J. H. Urbanus. 2023. <span>“Plastics in the Global Environment Assessed Through Material Flow Analysis, Degradation and Environmental Transportation.”</span> <em>Science of The Total Environment</em> 875 (June): 162644. <a href="https://doi.org/10.1016/j.scitotenv.2023.162644">https://doi.org/10.1016/j.scitotenv.2023.162644</a>.
+</div>
+<div id="ref-thorntonhampton2022" class="csl-entry" role="listitem">
+Thornton Hampton, L. M., S. M. Brander, S. Coffin, et al. 2022. <span>“Characterizing Microplastic Hazards: Which Concentration Metrics and Particle Characteristics Are Most Informative for Understanding Toxicity in Aquatic Organisms?”</span> <em>Microplastics and Nanoplastics</em> 2 (1): 20.
+</div>
+<div id="ref-ueda2025" class="csl-entry" role="listitem">
+Ueda, Koji, Yutaka Kameda, Emiko Fujita, et al. 2025. <span>“Size-Specific Distribution, Morphology, and Polymer Composition of Microplastic Particles in Surface Water and Sediments of Tokyo Bay.”</span> <em>Microplastics and Nanoplastics</em> 5 (1): 47. <a href="https://doi.org/10.1186/s43591-025-00168-z">https://doi.org/10.1186/s43591-025-00168-z</a>.
+</div>
+<div id="ref-woods2021" class="csl-entry" role="listitem">
+Woods, John S., Francesca Verones, Olivier Jolliet, Ian Vázquez-Rowe, and Anne-Marie Boulay. 2021. <span>“A Framework for the Assessment of Marine Litter Impacts in Life Cycle Impact Assessment.”</span> <em>Ecological Indicators</em> 129 (October): 107918. <a href="https://doi.org/10.1016/j.ecolind.2021.107918">https://doi.org/10.1016/j.ecolind.2021.107918</a>.
+</div>
+<div id="ref-zhang2020" class="csl-entry" role="listitem">
+Zhang, Chaonan, Shaodan Wang, Di Sun, et al. 2020. <span>“Microplastic Pollution in Surface Water from East Coastal Areas of Guangdong, South China and Preliminary Study on Microplastics Biomonitoring Using Two Marine Fish.”</span> <em>Chemosphere</em> 256 (October): 127202. <a href="https://doi.org/10.1016/j.chemosphere.2020.127202">https://doi.org/10.1016/j.chemosphere.2020.127202</a>.
+</div>
+</div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -631,6 +2496,38 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","descPosition":"right","loop":false,"openEffect":"fade","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

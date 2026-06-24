@@ -4,3 +4,5 @@
 # But keep the docs folder and this file
 !/docs/
 !/.gitignore
+/.quarto/
+**/*.quarto_ipynb
