@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Examples – Assessing Plastic Impacts in Life Cycle Assessment: A Practitioner’s Guide</title>
+<title>5&nbsp; Examples – LiLCA (Litter in Life Cycle Assessment) Plastic Footprint Guide</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="libs/quarto-nav/quarto-nav.js"></script>
@@ -102,18 +121,11 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="././resources/figures/guide_logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="././resources/figures/guide_logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <img src="././resources/figures/lilca_logo_guide.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="././resources/figures/lilca_logo_guide.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Assessing Plastic Impacts in Life Cycle Assessment: A Practitioner’s Guide</a> 
-        <div class="sidebar-tools-main">
-  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
-  <div class="quarto-reader-toggle-btn">
-  <i class="bi"></i>
-  </div>
-</a>
-</div>
+      <a href="./">LiLCA (Litter in Life Cycle Assessment) Plastic Footprint Guide</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -138,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02_physical-effects-on-biota-decision.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">When should physical effects on biota be accounted for?</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">When should plastic impacts be accounted for?</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -162,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06_faq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Frequently Asked Questions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">FAQ</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -176,8 +188,20 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#food-packaging" id="toc-food-packaging" class="nav-link active" data-scroll-target="#food-packaging"><span class="header-section-number">5.1</span> Food packaging</a></li>
+  <li><a href="#textile" id="toc-textile" class="nav-link" data-scroll-target="#textile"><span class="header-section-number">5.2</span> Textile</a></li>
+  <li><a href="#list-of-published-studies-that-include-plastic-impacts" id="toc-list-of-published-studies-that-include-plastic-impacts" class="nav-link" data-scroll-target="#list-of-published-studies-that-include-plastic-impacts"><span class="header-section-number">5.3</span> List of published studies that include plastic impacts</a>
+  <ul>
+  <li><a href="#published-lca-case-studies-that-include-plastic-impacts" id="toc-published-lca-case-studies-that-include-plastic-impacts" class="nav-link" data-scroll-target="#published-lca-case-studies-that-include-plastic-impacts"><span class="header-section-number">5.3.1</span> Published LCA case studies that include plastic impacts</a></li>
+  <li><a href="#published-lca-studies-using-previous-versions-of-the-method" id="toc-published-lca-studies-using-previous-versions-of-the-method" class="nav-link" data-scroll-target="#published-lca-studies-using-previous-versions-of-the-method"><span class="header-section-number">5.3.2</span> Published LCA studies using previous versions of the method</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -201,8 +225,81 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="food-packaging" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="food-packaging"><span class="header-section-number">5.1</span> Food packaging</h2>
+</section>
+<section id="textile" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="textile"><span class="header-section-number">5.2</span> Textile</h2>
+</section>
+<section id="list-of-published-studies-that-include-plastic-impacts" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="list-of-published-studies-that-include-plastic-impacts"><span class="header-section-number">5.3</span> List of published studies that include plastic impacts</h2>
+<section id="published-lca-case-studies-that-include-plastic-impacts" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="published-lca-case-studies-that-include-plastic-impacts"><span class="header-section-number">5.3.1</span> Published LCA case studies that include plastic impacts</h3>
+<p>No published studies so far; refer to Sections 5.1 and 5.2 above.</p>
+</section>
+<section id="published-lca-studies-using-previous-versions-of-the-method" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="published-lca-studies-using-previous-versions-of-the-method"><span class="header-section-number">5.3.2</span> Published LCA studies using previous versions of the method</h3>
+<p>Multiple studies have been published which use the physical effects on biota CFs. However, it is important to note that some of these studies were conducted using previous versions of the CFs, and therefore, do not reflect the latest update (i.e., the PEBBLE method). These studies cover the following sectors:</p>
+<ul>
+<li>packaging <span class="citation" data-cites="corella-puertas2022 corella-puertas2023 erradhouani2026 galafton2025">(<a href="references.html#ref-corella-puertas2022" role="doc-biblioref">Corella-Puertas et al. 2022</a>, <a href="references.html#ref-corella-puertas2023" role="doc-biblioref">2023</a>; <a href="references.html#ref-erradhouani2026" role="doc-biblioref">Erradhouani et al. 2026</a>; <a href="references.html#ref-galafton2025" role="doc-biblioref">Galafton et al. 2025</a>)</span>,</li>
+<li>fishing <span class="citation" data-cites="askham2026">(<a href="references.html#ref-askham2026" role="doc-biblioref">Askham et al. 2026</a>)</span>,</li>
+<li>agriculture <span class="citation" data-cites="louvet2026">(<a href="references.html#ref-louvet2026" role="doc-biblioref">Louvet et al. 2026</a>)</span>,</li>
+<li>textile <span class="citation" data-cites="fois2026 pellengahr2025 pellengahr2025a saadi2025 saadi2026">(<a href="references.html#ref-fois2026" role="doc-biblioref">Fois et al. 2026</a>; <a href="references.html#ref-pellengahr2025" role="doc-biblioref">Pellengahr, Corella-Puertas, et al. 2025</a>; <a href="references.html#ref-pellengahr2025a" role="doc-biblioref">Pellengahr, Ghannadzadeh, et al. 2025</a>; <a href="references.html#ref-saadi2025" role="doc-biblioref">Saadi et al. 2025</a>; <a href="references.html#ref-saadi2026" role="doc-biblioref">Saadi and Boulay 2026</a>)</span>,</li>
+<li>sports <span class="citation" data-cites="zeilerbauer2024">(<a href="references.html#ref-zeilerbauer2024" role="doc-biblioref">Zeilerbauer et al. 2024</a>)</span>,</li>
+<li>household items <span class="citation" data-cites="hamann2026">(<a href="references.html#ref-hamann2026" role="doc-biblioref">Hamann et al. 2026</a>)</span>,</li>
+<li>and wastewater treatment <span class="citation" data-cites="alibekov2025 puhar2025">(<a href="references.html#ref-alibekov2025" role="doc-biblioref">Alibekov et al. 2025</a>; <a href="references.html#ref-puhar2025" role="doc-biblioref">Puhar et al. 2025</a>)</span></li>
+</ul>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-alibekov2025" class="csl-entry" role="listitem">
+Alibekov, Alisher, Mira Meirambayeva, Shugyla Yengsebek, Firyuza Aldyngurova, and Woojin Lee. 2025. <span>“Environmental Impact of Microplastic Emissions from Wastewater Treatment Plant Through Life Cycle Assessment.”</span> <em>Science of The Total Environment</em> 962 (January): 178378. <a href="https://doi.org/10.1016/j.scitotenv.2025.178378">https://doi.org/10.1016/j.scitotenv.2025.178378</a>.
+</div>
+<div id="ref-askham2026" class="csl-entry" role="listitem">
+Askham, Cecilia, Alejandro Deville, Mafalda Silva, et al. 2026. <span>“Expanding Life Cycle Impact Assessment to Account for Marine Plastic Emissions: A Case Study for the Fishing Industry.”</span> <em>The International Journal of Life Cycle Assessment</em> 31 (1-3): 46. <a href="https://doi.org/10.1007/s11367-026-02607-2">https://doi.org/10.1007/s11367-026-02607-2</a>.
+</div>
+<div id="ref-corella-puertas2022" class="csl-entry" role="listitem">
+Corella-Puertas, Elena, Pauline Guieu, Alessio Aufoujal, Cécile Bulle, and Anne-Marie Boulay. 2022. <span>“Development of Simplified Characterization Factors for the Assessment of Expanded Polystyrene and Tire Wear Microplastic Emissions Applied in a Food Container Life Cycle Assessment.”</span> <em>Journal of Industrial Ecology</em> 26 (6): 1882–94. <a href="https://doi.org/10.1111/jiec.13269">https://doi.org/10.1111/jiec.13269</a>.
+</div>
+<div id="ref-corella-puertas2023" class="csl-entry" role="listitem">
+Corella-Puertas, Elena, Carla Hajjar, Jérôme Lavoie, and Anne-Marie Boulay. 2023. <span>“MarILCA Characterization Factors for Microplastic Impacts in Life Cycle Assessment: Physical Effects on Biota from Emissions to Aquatic Environments.”</span> <em>Journal of Cleaner Production</em> 418 (September): 138197. <a href="https://doi.org/10.1016/j.jclepro.2023.138197">https://doi.org/10.1016/j.jclepro.2023.138197</a>.
+</div>
+<div id="ref-erradhouani2026" class="csl-entry" role="listitem">
+Erradhouani, Bilal, Veronique Coma, Guido Sonnemann, and Philippe Loubet. 2026. <span>“Transition to Bio-Based Plastic Packaging Reveals Complex Climate<span></span>biodiversity Trade-Offs.”</span> <em>Nature Communications</em> 17 (1): 3630. <a href="https://doi.org/10.1038/s41467-026-69016-9">https://doi.org/10.1038/s41467-026-69016-9</a>.
+</div>
+<div id="ref-fois2026" class="csl-entry" role="listitem">
+Fois, Flaminia, Valentina Terenzi, Patrizio Tratzi, et al. 2026. <span>“Environmental Impacts of Cotton and Polyester Textile Management Strategies: Comparison of Separate Collection for Reusing and Textile Waste Recycling.”</span> <em>Environmental Impact Assessment Review</em> 116 (January): 108088. <a href="https://doi.org/10.1016/j.eiar.2025.108088">https://doi.org/10.1016/j.eiar.2025.108088</a>.
+</div>
+<div id="ref-galafton2025" class="csl-entry" role="listitem">
+Galafton, Christina, Vaibhav Budhiraja, Sarah Stevens, Branka Mušič, and Daniel Maga. 2025. <span>“Environmental and Littering Impacts of Disposable Cups Made of Polypropylene and Polylactic Acid in Germany.”</span> <em>Sustainable Production and Consumption</em> 57 (July): 35–45. <a href="https://doi.org/10.1016/j.spc.2025.04.013">https://doi.org/10.1016/j.spc.2025.04.013</a>.
+</div>
+<div id="ref-hamann2026" class="csl-entry" role="listitem">
+Hamann, Leandra, Christina Galafton, Peter T. Rühr, Alexander Blanke, and Nils Thonemann. 2026. <span>“From Sink to Sea: Microplastic Release from Kitchen Sponges and Potential Environmental Effects.”</span> <em>Environmental Advances</em> 23 (April): 100693. <a href="https://doi.org/10.1016/j.envadv.2026.100693">https://doi.org/10.1016/j.envadv.2026.100693</a>.
+</div>
+<div id="ref-louvet2026" class="csl-entry" role="listitem">
+Louvet, Juliette, Joris T. K. Quik, and Anne-Marie Boulay. 2026. <span>“Regionalized Characterization Factors for Microplastic Emissions in Life Cycle Assessment Considering Multimedia Fate Modelling.”</span> <em>Journal of Cleaner Production</em> 538 (January): 147217. <a href="https://doi.org/10.1016/j.jclepro.2025.147217">https://doi.org/10.1016/j.jclepro.2025.147217</a>.
+</div>
+<div id="ref-pellengahr2025" class="csl-entry" role="listitem">
+Pellengahr, Felicitas, Elena Corella-Puertas, Valérie Mattelin, et al. 2025. <span>“Modeling Marine Microplastic Emissions in Life Cycle Assessment: Characterization Factors for Biodegradable Polymers and Their Application in a Textile Case Study.”</span> <em>Frontiers in Toxicology</em> 7 (March): 1494220. <a href="https://doi.org/10.3389/ftox.2025.1494220">https://doi.org/10.3389/ftox.2025.1494220</a>.
+</div>
+<div id="ref-pellengahr2025a" class="csl-entry" role="listitem">
+Pellengahr, Felicitas, Ali Ghannadzadeh, and Yvonne van der Meer. 2025. <span>“Advancing Sustainability of Textiles: A Life Cycle and Microfiber Emission Assessment of Locally Manufactured Circular Sportswear.”</span> <em>Environmental Sciences Europe</em> 37 (1): 175. <a href="https://doi.org/10.1186/s12302-025-01204-8">https://doi.org/10.1186/s12302-025-01204-8</a>.
+</div>
+<div id="ref-puhar2025" class="csl-entry" role="listitem">
+Puhar, Jan, Michael T. Sturm, Erika Myers, et al. 2025. <span>“When Technology Meets Sustainability: Microplastic Removal from Industrial Wastewater, Including Impact Analysis and Life Cycle Assessment.”</span> <em>Water</em> 17 (5): 671. <a href="https://doi.org/10.3390/w17050671">https://doi.org/10.3390/w17050671</a>.
+</div>
+<div id="ref-saadi2026" class="csl-entry" role="listitem">
+Saadi, Nadim, and Anne-Marie Boulay. 2026. <span>“Microfibers in Life Cycle Assessment: Comparing the Physical Effects of Cellulosic and Synthetic Fibers via Characterization Factors Development.”</span> <em>Integrated Environmental Assessment and Management</em>, January 10, vjag007. <a href="https://doi.org/10.1093/inteam/vjag007">https://doi.org/10.1093/inteam/vjag007</a>.
+</div>
+<div id="ref-saadi2025" class="csl-entry" role="listitem">
+Saadi, Nadim, Jérôme Lavoie, Peter Fantke, Paula Redondo-Hasselerharm, and Anne-Marie Boulay. 2025. <span>“Including Impacts of Microplastics in Marine Water and Sediments in Life Cycle Assessment.”</span> <em>Journal of Cleaner Production</em> 520 (August): 146037. <a href="https://doi.org/10.1016/j.jclepro.2025.146037">https://doi.org/10.1016/j.jclepro.2025.146037</a>.
+</div>
+<div id="ref-zeilerbauer2024" class="csl-entry" role="listitem">
+Zeilerbauer, Lukas, Johannes Lindorfer, Pauline Fuchs, et al. 2024. <span>“Quantifying the Sustainability of Football (Soccer) Pitches: A Comparison of Artificial and Natural Turf Pitches with a Focus on Microplastics and Their Environmental Impacts.”</span> <em>Sustainability</em> 16 (8): 3487. <a href="https://doi.org/10.3390/su16083487">https://doi.org/10.3390/su16083487</a>.
+</div>
+</div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -612,8 +709,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./06_faq.html" class="pagination-link" aria-label="Frequently Asked Questions">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Frequently Asked Questions</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./06_faq.html" class="pagination-link" aria-label="FAQ">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">FAQ</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
