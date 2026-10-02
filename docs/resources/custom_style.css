@@ -24,6 +24,10 @@
   --font-size-root: 18px;
 }
 
+#quarto-content p {
+  text-align: justify;
+}
+
 body {
   font-family:
     "Inter",
