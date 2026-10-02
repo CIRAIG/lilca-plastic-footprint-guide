@@ -44,6 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="libs/bootstrap/bootstrap.min.js"></script>
 <link href="libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="libs/bootstrap/bootstrap-1c9137b7b1c0320e377730bf2be1742e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -207,6 +210,29 @@ ul.task-list li input[type="checkbox"] {
 <h1 class="unnumbered">Preface</h1>
 <p>Life cycle assessment (LCA) is a standardized tool (ISO 14040) used to evaluate the impacts of products or services over their life cycle, from production to end-of-life, by evaluating impacts on ecosystem quality, human health, and ecosystem services and resources.</p>
 <p>Up until recently, LCA of plastic products (and others) did not consider the impacts of plastic pollution emitted during their life cycles. New life cycle impact assessment (LCIA) metrics have allowed plastic pollution to be included in LCA, marking a significant step that should be adopted, especially for specific sectors such as packaging or textiles. As these advances are not generally known to the broader LCA community, this guide aims to facilitate integration of these new approaches in LCA.</p>
+<p>Despite its title, this guide is not limited to conventional plastics. It covers:</p>
+<ul>
+<li>conventional polymers (e.g., polyethylene, polypropylene, PET, PVC, polystyrene)</li>
+<li>biodegradable and bio-based polymers (e.g., PLA, PHA, PBAT, polycaprolactone, starch blends)</li>
+<li>natural cellulosic fibres (cotton, linen)</li>
+<li>man-made cellulosic fibres (viscose/rayon, modal, lyocell)</li>
+<li>tyre and road wear particles</li>
+</ul>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Companion tool
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This guide is accompanied by the <strong>LiLCA Plastic Footprint Tool</strong>, which applies the methods described here to calculate the plastic footprint of a product or system.</p>
+<p><a href="./resources/figures/lilca_logo_tool.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="./resources/figures/lilca_logo_tool.png" class="img-fluid" style="width:30.0%"></a></p>
+<p>Access the tool: <a href="https://ciraig.github.io/marilca-practitioner-guide/" target="_blank">LiLCA Plastic Footprint Tool</a></p>
+</div>
+</div>
 <section id="objective" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="objective">Objective</h2>
 <p>The objective of this methodological guide is to provide LCA practitioners with a detailed understanding of how to assess potential impacts associated with plastic emissions. The guide provides step-by-step support for practitioners seeking to implement the relevant characterization factors (CFs) in their assessments, from the identification and preparation of relevant inventory flows to the calculation and interpretation of midpoint and damage results. At the time of writing the first edition of this guide, the available CFs covered in this guide are the ones assessing physical effects on biota from microplastic ingestion. Other CFs will be included in future revisions.</p>
@@ -655,6 +681,38 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","descPosition":"right","loop":false,"openEffect":"fade","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
