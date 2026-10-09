@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="libs/quarto-nav/quarto-nav.js"></script>
@@ -241,7 +260,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Yes, the plastic footprint at the impact level can be used as a standalone indicator to compare plastic alternatives based on their potential impacts on the environment. It is nevertheless recommended to include it as part of an LCA covering all relevant impact categories, in order to avoid regrettable substitutions. For example, replacing a conventional polymer by a biodegradable one could lower the plastic footprint while increasing climate change impacts (Section 3.3.1).</p>
+<p>Yes, the plastic footprint at the impact level can be used as a standalone indicator to compare plastic alternatives based on their potential impacts on the environment. It is nevertheless recommended to include it as part of an LCA covering all relevant impact categories, in order to avoid regrettable substitutions. For example, replacing a conventional polymer by a biodegradable one could lower the plastic footprint while increasing climate change impacts (<a href="03_applying-cfs-in-lca.html#sec-analyzing-the-results" class="quarto-xref"><span>Section 3.4.1</span></a>).</p>
 </div>
 </div>
 </div>
@@ -257,7 +276,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Not yet, in this edition of the guide. CFs for human toxicity (non-cancer) and for the marine biological carbon pump are under development and expected in 2027 (Section 1.2.4). CFs for macroplastic entanglement (Høiberg et al., 2024) and an effect factor for ingestion (Marhoon et al., 2026) exist but are not fully aligned with the modeling approach used for MiP (Sections 1.2.2.2 and 1.2.4.3).</p>
+<p>Not yet, in this edition of the guide. CFs for human toxicity (non-cancer) and for the marine biological carbon pump are under development and expected in 2027 (<a href="01_background.html#sec-ongoing-impact-assessment-modeling" class="quarto-xref"><span>Section 1.2.4</span></a>). CFs for macroplastic entanglement <span class="citation" data-cites="høiberg2024">(<a href="references.html#ref-høiberg2024" role="doc-biblioref">Høiberg et al. 2024</a>)</span> and an effect factor for ingestion <span class="citation" data-cites="marhoon2026">(<a href="references.html#ref-marhoon2026" role="doc-biblioref">Marhoon et al. 2026</a>)</span> exist but are not fully aligned with the modeling approach used for MiP (<a href="01_background.html#sec-entanglement-impacts-from-fishing-gear" class="quarto-xref"><span>Section 1.2.2.2</span></a> and <a href="01_background.html#sec-ingestion-micro-and-macroplastics" class="quarto-xref"><span>Section 1.2.4.3</span></a>).</p>
 </div>
 </div>
 </div>
@@ -273,7 +292,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Why are plastic emissions missing from my LCI database, and what about the background system? Even when an LCIA method includes the CFs, the corresponding elementary flows for plastic litter emissions are generally not available, or not systematically populated, in commonly used LCI databases (Section 2). Plastic emissions must therefore be quantified separately, mainly for the foreground system. Background systems will essentially not include plastic emissions, which is a limitation that should be acknowledged in the interpretation (Section 3.1.8).</p>
+<p>Why are plastic emissions missing from my LCI database, and what about the background system? Even when an LCIA method includes the CFs, the corresponding elementary flows for plastic litter emissions are generally not available, or not systematically populated, in commonly used LCI databases (<a href="02_physical-effects-on-biota-decision.html" class="quarto-xref"><span>Chapter 2</span></a>). Plastic emissions must therefore be quantified separately, mainly for the foreground system. Background systems will essentially not include plastic emissions, which is a limitation that should be acknowledged in the interpretation (<a href="03_applying-cfs-in-lca.html#sec-limits-inventory-plastic-emissions" class="quarto-xref"><span>Section 3.2.8</span></a>).</p>
 </div>
 </div>
 </div>
@@ -289,7 +308,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The main sources currently available are the Plastic Footprint Network (PFN) technical modules, the Plastic Leak Project (PLP) sectorial guidance, and national statistics or country-specific assessments (Section 4, Tables 4.1 and 4.2). At the time of writing, three of the seven PFN modules are complete: packaging, textiles, and tire abrasion. Practitioners should check what each data source expresses (e.g., direct emissions or emissions after redistribution) before using it (Section 3.1.3).</p>
+<p>The main sources currently available are the Plastic Footprint Network (PFN) technical modules, the Plastic Leak Project (PLP) sectorial guidance, and national statistics or country-specific assessments (<a href="04_data_sources.html" class="quarto-xref"><span>Chapter 4</span></a>, <a href="04_data_sources.html#tbl-source-ef" class="quarto-xref">Table&nbsp;<span>4.1</span></a> and <a href="04_data_sources.html#tbl-pfn-modules" class="quarto-xref">Table&nbsp;<span>4.2</span></a>). At the time of writing, three of the seven PFN modules are complete: packaging, textiles, and tire abrasion. Practitioners should check what each data source expresses (e.g., direct emissions or emissions after redistribution) before using it (<a href="03_applying-cfs-in-lca.html#sec-emission-quantity" class="quarto-xref"><span>Section 3.2.3</span></a>).</p>
 </div>
 </div>
 </div>
@@ -305,7 +324,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>No.&nbsp;Plastic mismanagement and plastic leakage to the environment are not synonymous. Mismanagement often includes open burning and landfilling, which are not direct emissions of plastic to the environment, although they may lead to leakage. Data that clearly identify leakage to the environment are needed (Section 3.1.3).</p>
+<p>No.&nbsp;Plastic mismanagement and plastic leakage to the environment are not synonymous. Mismanagement often includes open burning and landfilling, which are not direct emissions of plastic to the environment, although they may lead to leakage. Data that clearly identify leakage to the environment are needed (<a href="03_applying-cfs-in-lca.html#sec-emission-quantity" class="quarto-xref"><span>Section 3.2.3</span></a>).</p>
 </div>
 </div>
 </div>
@@ -321,7 +340,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>As a pragmatic default, the generic PFN release rates for waterways and land can be used to allocate emissions to continental sea water and continental natural soil, respectively. For microplastic emissions from textiles, emissions to land should be assigned to agricultural soil. Fractions assumed to be removed or cleaned should not be characterized as emissions, and the assumptions made should be documented (Section 3.1.4 and Table 3.5).</p>
+<p>As a pragmatic default, the generic PFN release rates for waterways and land can be used to allocate emissions to continental sea water and continental natural soil, respectively. For microplastic emissions from textiles, emissions to land should be assigned to agricultural soil. Fractions assumed to be removed or cleaned should not be characterized as emissions, and the assumptions made should be documented (<a href="03_applying-cfs-in-lca.html#sec-environmental-compartment" class="quarto-xref"><span>Section 3.2.4</span></a> and <a href="03_applying-cfs-in-lca.html#tbl-compartment-assignment" class="quarto-xref">Table&nbsp;<span>3.6</span></a>).</p>
 </div>
 </div>
 </div>
@@ -337,7 +356,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The fraction of MaP emissions that fragments into MiP is estimated using fragmentation rates that depend on the material type (rigid or flexible) and on the emission compartment (Table 3.7) and is then characterized with the CFs. The remaining fraction is currently not characterized, which leads to an underestimation of impacts. A sensitivity analysis on the fragmentation rate is therefore recommended (Sections 3.1.5, 3.1.8, and 3.2.2).</p>
+<p>The fraction of MaP emissions that fragments into MiP is estimated using fragmentation rates that depend on the material type (rigid or flexible) and on the emission compartment (<a href="03_applying-cfs-in-lca.html#tbl-fragmentation" class="quarto-xref">Table&nbsp;<span>3.9</span></a>) and is then characterized with the CFs. The remaining fraction is currently not characterized, which leads to an underestimation of impacts. A sensitivity analysis on the fragmentation rate is therefore recommended (<a href="03_applying-cfs-in-lca.html#sec-fragmentation" class="quarto-xref"><span>Section 3.2.5</span></a>, <a href="03_applying-cfs-in-lca.html#sec-limits-inventory-plastic-emissions" class="quarto-xref"><span>Section 3.2.8</span></a>, and <a href="03_applying-cfs-in-lca.html#sec-limits-impact-assessment-plastic-emissions" class="quarto-xref"><span>Section 3.3.2</span></a>).</p>
 </div>
 </div>
 </div>
@@ -356,7 +375,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The CFs represent the physical effects of microplastic (MiP) particles on biota, namely entanglement, ingestion, and adherence, which may lead to mortality or to reduced growth, feeding, or reproduction (Section 3.2.1). They are derived from ecotoxicological experiments using virgin particles and therefore do not include the chemical effects of additives (Sections 1.2.3 and 3.2.2). They are available for freshwater, marine, and terrestrial ecosystems and are expressed under the area of protection Ecosystem Quality.</p>
+<p>The CFs represent the physical effects of microplastic (MiP) particles on biota, namely entanglement, ingestion, and adherence, which may lead to mortality or to reduced growth, feeding, or reproduction (<a href="03_applying-cfs-in-lca.html#sec-physical-effects-on-biota" class="quarto-xref"><span>Section 3.3.1</span></a>). They are derived from ecotoxicological experiments using virgin particles and therefore do not include the chemical effects of additives (<a href="01_background.html#sec-additive-coverage" class="quarto-xref"><span>Section 1.2.3</span></a> and <a href="03_applying-cfs-in-lca.html#sec-limits-impact-assessment-plastic-emissions" class="quarto-xref"><span>Section 3.3.2</span></a>). They are available for freshwater, marine, and terrestrial ecosystems and are expressed under the area of protection Ecosystem Quality.</p>
 </div>
 </div>
 </div>
@@ -372,7 +391,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The PEBBLE CFs (Saadi et al., 2026) are the most up-to-date set of CFs for physical effects on biota. They are implemented in IMPACT World+ and GLAM (Section 3.2.1), and the free online tool that accompanies this guide facilitates the calculations. Future CFs developed by the MarILCA working group will be added to this guide and its tool as they become available (Section 1.2.4).</p>
+<p>The PEBBLE CFs <span class="citation" data-cites="Saadi2026MarILCA">(<a href="references.html#ref-Saadi2026MarILCA" role="doc-biblioref">Saadi et al. 2026</a>)</span> are the most up-to-date set of CFs for physical effects on biota. They are implemented in IMPACT World+ and GLAM (<a href="03_applying-cfs-in-lca.html#sec-physical-effects-on-biota" class="quarto-xref"><span>Section 3.3.1</span></a>), and the free online tool that accompanies this guide facilitates the calculations (<a href="https://lilca-plastic-footprint-tool.streamlit.app/" target="_blank">LiLCA Plastic Footprint Tool</a>). Future CFs developed by the MarILCA working group will be added to this guide and its tool as they become available (<a href="01_background.html#sec-ongoing-impact-assessment-modeling" class="quarto-xref"><span>Section 1.2.4</span></a>).</p>
 </div>
 </div>
 </div>
@@ -388,7 +407,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Unspecified shapes are considered spherical (Table 3.9). Default sizes by shape are provided in Table 3.11: 1000 µm for spheres, 10 µm for fibers, and 100 µm for film fragments, with a range of 1000 to 5000 µm for unspecified shapes. For film-like MaP, the thickness of the item can be used to estimate the size of the resulting MiP. Because CFs vary considerably with particle size, this choice should be documented and tested (Sections 3.1.6 and 3.1.7).</p>
+<p>Unspecified shapes are considered spherical (<a href="03_applying-cfs-in-lca.html#tbl-shape" class="quarto-xref">Table&nbsp;<span>3.13</span></a>). Default sizes by shape are provided in <a href="03_applying-cfs-in-lca.html#tbl-size" class="quarto-xref">Table&nbsp;<span>3.15</span></a>: 1000 µm for spheres, 10 µm for fibers, and 100 µm for film fragments, with a range of 1000 to 5000 µm for unspecified shapes. For film-like MaP, the thickness of the item can be used to estimate the size of the resulting MiP. Because CFs vary considerably with particle size, this choice should be documented and tested (<a href="03_applying-cfs-in-lca.html#sec-mip-shape" class="quarto-xref"><span>Section 3.2.6</span></a> and <a href="03_applying-cfs-in-lca.html#sec-mip-size" class="quarto-xref"><span>Section 3.2.7</span></a>).</p>
 </div>
 </div>
 </div>
@@ -404,7 +423,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The CFs are provided at midpoint and damage levels, in PDF.m2.yr/kg for IMPACT World+, PDF.yr/kg for GLAM, and species.yr/kg for ReCiPe. The units to use are those of the LCIA method applied to the other impact categories of the study, so that results can be combined and compared (Section 3.2.1.1).</p>
+<p>The CFs are provided at midpoint and damage levels, in PDF.m<sup>2</sup>.yr/kg for IMPACT World+, PDF.yr/kg for GLAM, and species.yr/kg for ReCiPe. The units to use are those of the LCIA method applied to the other impact categories of the study, so that results can be combined and compared (<a href="03_applying-cfs-in-lca.html#sec-units-modeling-frameworks" class="quarto-xref"><span>Section 3.3.1.1</span></a>).</p>
 </div>
 </div>
 </div>
@@ -420,7 +439,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The short-term CFs quantify the potential impacts occurring during the first 100 years, and the long-term CFs those occurring beyond 100 years, similarly to the short-term and long-term Climate change indicators of IMPACT World+ (Section 3.2.1). As for climate change, this choice reflects a value choice regarding the time perspective and should be stated transparently in the goal and scope of the study.</p>
+<p>The short-term CFs quantify the potential impacts occurring during the first 100 years, and the long-term CFs those occurring beyond 100 years, similarly to the short-term and long-term Climate change indicators of <a href="https://www.impactworldplus.org/version-2-0/#elementor-toc__heading-anchor-2" target="_blank">IMPACT World+</a> (<a href="03_applying-cfs-in-lca.html#sec-physical-effects-on-biota" class="quarto-xref"><span>Section 3.3.1</span></a>). As for climate change, this choice reflects a value choice regarding the time perspective and should be stated transparently in the goal and scope of the study.</p>
 </div>
 </div>
 </div>
@@ -436,7 +455,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>No.&nbsp;The current CFs only account for the physical effects of polymer particles. When the identity, amount, release, fate, and toxicity of additives are known, their impacts can be assessed through existing ecotoxicity impact pathways (Sections 1.2.3 and 3.2.2). Current evidence suggests that most potential impacts on Ecosystem Quality are associated with the polymer fraction rather than with the additives (Lavoie et al., under review).</p>
+<p>No.&nbsp;The current CFs only account for the physical effects of polymer particles. When the identity, amount, release, fate, and toxicity of additives are known, their impacts can be assessed through existing ecotoxicity impact pathways (<a href="03_applying-cfs-in-lca.html#sec-emission-quantity" class="quarto-xref"><span>Section 3.2.3</span></a> and <a href="03_applying-cfs-in-lca.html#sec-limits-impact-assessment-plastic-emissions" class="quarto-xref"><span>Section 3.3.2</span></a>). Current evidence suggests that most potential impacts on Ecosystem Quality are associated with the polymer fraction rather than with the additives (Lavoie et al., under review).</p>
 </div>
 </div>
 </div>
@@ -455,12 +474,23 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The most frequent sources of inconsistency are the following: (1) units, as emitted masses must be expressed in kg and the CF units must match the LCIA method used (Section 3.2.1.1); (2) emission factors, which must represent emissions at the point of release and not mismanagement rates or redistribution rates, to avoid double-counting fate (Section 3.1.3); (3) the region and emission compartment assigned to each flow (Sections 3.1.2 and 3.1.4); (4) the fragmentation of macroplastics (MaP), as only the fragmenting fraction can be characterized (Section 3.1.5); (5) the particle shape and size, since CFs can vary by up to six orders of magnitude across sizes (Sections 3.1.6 and 3.1.7); and (6) the choice between short-term and long-term CFs (Section 3.2.1).</p>
+<p>The most frequent sources of inconsistency are the following: (1) units, as emitted masses must be expressed in kg and the CF units must match the LCIA method used (<a href="03_applying-cfs-in-lca.html#sec-units-modeling-frameworks" class="quarto-xref"><span>Section 3.3.1.1</span></a>); (2) emission factors, which must represent emissions at the point of release and not mismanagement rates or redistribution rates, to avoid double-counting fate (<a href="03_applying-cfs-in-lca.html#sec-emission-quantity" class="quarto-xref"><span>Section 3.2.3</span></a>); (3) the region and emission compartment assigned to each flow (<a href="03_applying-cfs-in-lca.html#sec-geographical-location" class="quarto-xref"><span>Section 3.2.2</span></a> and <a href="03_applying-cfs-in-lca.html#sec-environmental-compartment" class="quarto-xref"><span>Section 3.2.4</span></a>); (4) the fragmentation of macroplastics (MaP), as only the fragmenting fraction can be characterized (<a href="03_applying-cfs-in-lca.html#sec-fragmentation" class="quarto-xref"><span>Section 3.2.5</span></a>); (5) the particle shape and size, since CFs can vary by up to six orders of magnitude across sizes (<a href="03_applying-cfs-in-lca.html#sec-mip-shape" class="quarto-xref"><span>Section 3.2.6</span></a> and <a href="03_applying-cfs-in-lca.html#sec-mip-size" class="quarto-xref"><span>Section 3.2.7</span></a>); and (6) the choice between short-term and long-term CFs (<a href="03_applying-cfs-in-lca.html#sec-physical-effects-on-biota" class="quarto-xref"><span>Section 3.3.1</span></a>).</p>
 </div>
 </div>
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-høiberg2024" class="csl-entry" role="listitem">
+Høiberg, Marthe A., Konstantin Stadler, and Francesca Verones. 2024. <span>“Disentangling Marine Plastic Impacts in Life Cycle Assessment: Spatially Explicit Characterization Factors for Ecosystem Quality.”</span> <em>Science of The Total Environment</em> 949 (November): 175019. <a href="https://doi.org/10.1016/j.scitotenv.2024.175019">https://doi.org/10.1016/j.scitotenv.2024.175019</a>.
+</div>
+<div id="ref-marhoon2026" class="csl-entry" role="listitem">
+Marhoon, Ahmed, Erin L. Murphy, Marthe Alnes Høiberg, Jan Borgelt, Martin Dorber, and Francesca Verones. 2026. <span>“An Effect Factor for Macro- and Microplastic Ingestion Impacts on Marine Ecosystems for Use in Life Cycle Assessment.”</span> <em>Marine Pollution Bulletin</em> 223 (February): 118968. <a href="https://doi.org/10.1016/j.marpolbul.2025.118968">https://doi.org/10.1016/j.marpolbul.2025.118968</a>.
+</div>
+<div id="ref-Saadi2026MarILCA" class="csl-entry" role="listitem">
+Saadi, Nadim, Carla Hajjar, Louisa Ospital, et al. 2026. <em>MarILCA Characterization Factors for Microplastics, Tire Particles and Cellulosic Fibers in Life Cycle Assessment: Regionalized Impacts in Marine, Freshwater and Terrestrial Ecosystems</em>. <a href="https://doi.org/10.2139/ssrn.6727270">https://doi.org/10.2139/ssrn.6727270</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

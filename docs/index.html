@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="libs/quarto-nav/quarto-nav.js"></script>
@@ -220,10 +239,10 @@ ul.task-list li input[type="checkbox"] {
 <p>Up until recently, LCA of plastic products (and others) did not consider the impacts of plastic pollution emitted during their life cycles. New life cycle impact assessment (LCIA) metrics have allowed plastic pollution to be included in LCA, marking a significant step that should be adopted, especially for specific sectors such as packaging or textiles. As these advances are not generally known to the broader LCA community, this guide aims to facilitate integration of these new approaches in LCA.</p>
 <p>Despite its title, this guide is not limited to conventional plastics. It covers:</p>
 <ul>
-<li>conventional polymers (e.g., polyethylene, polypropylene, PET, PVC, polystyrene)</li>
+<li>conventional polymers (e.g., PE, PP, PET, PVC, PS)</li>
 <li>biodegradable and bio-based polymers (e.g., PLA, PHA, PBAT, polycaprolactone, starch blends)</li>
 <li>natural cellulosic fibres (cotton, linen)</li>
-<li>man-made cellulosic fibres (viscose/rayon, modal, lyocell)</li>
+<li>anthropogenic cellulosic fibres (viscose/rayon, modal, lyocell)</li>
 <li>tyre and road wear particles</li>
 </ul>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
@@ -247,7 +266,7 @@ ul.task-list li input[type="checkbox"] {
 <p>This guide includes steps to assess the amount of plastic emitted over the life cycle of products, and employs the CFs developed by <a href="https://marilca.org/" target="_blank">MarILCA</a>, which link the emissions of plastic to their potential impacts on ecosystem quality. These CFs were developed within the <a href="https://marilca.org/" target="_blank">MarILCA</a> framework. The <a href="https://marilca.org/" target="_blank">MarILCA</a> working group was created in 2018 with the support of the <a href="https://www.lifecycleinitiative.org/" target="_blank">Life Cycle Initiative of UN Environment</a> and the <a href="https://fslci.org/" target="_blank">Forum for Sustainability through Life Cycle Innovation</a> (FSLCI), with the objective of integrating potential environmental impacts of marine litter, especially plastic, into LCA results. This effort aims to provide a more comprehensive picture of potential environmental impacts and to support the identification of trade-offs associated with the use of plastic and other materials in product systems.</p>
 <p>Because these CFs may not yet be readily available or fully operationalized in commonly used LCA software and LCI databases, practitioners may need to perform complementary calculations outside their usual modeling workflow. Depending on the software, database, and modeling approach used, this may concern the preparation of the LCI, the application of CFs during LCIA, or both.</p>
 <p>Using this guide should therefore enable practitioners with different levels of experience to consistently integrate contributions from plastic emissions into their LCAs, either at midpoint or damage level, while making transparent the assumptions, data choices, and calculation steps required for implementation.</p>
-<p>This guide follows the plastic footprint definition of Corella-Puertas et al.&nbsp;(2026). The plastic footprint is defined as (1) the mass of plastic litter entering the environment (with information on the polymer type, size, shape), and (2) its environmental impacts (quantified via impact assessment metrics). Here, the assessment focuses on the “plastic physical footprint”. A free online tool is available to facilitate the calculations outlined in this guide.</p>
+<p>This guide follows the plastic footprint definition of <span class="citation" data-cites="corella-puertas2025">(<a href="references.html#ref-corella-puertas2025" role="doc-biblioref">Corella-Puertas et al. 2025</a>)</span>. The plastic footprint is defined as (1) the mass of plastic litter entering the environment (with information on the polymer type, size, shape), and (2) its environmental impacts (quantified via impact assessment metrics). Here, the assessment focuses on the “<em>plastic physical footprint</em>” (<strong>i.e.&nbsp;a plastic footprint covering physical effects on biota</strong>). A free online tool is available to facilitate the calculations outlined in this guide.</p>
 </section>
 <section id="content" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="content">Content</h2>
@@ -282,6 +301,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-corella-puertas2025" class="csl-entry" role="listitem">
+Corella-Puertas, Elena, Nadim Saadi, Martina Gallato, Magnus Fröhling, and Anne-Marie Boulay. 2025. <span>“Plastic Footprint: Definition and Operationalization.”</span> 284284. <a href="https://www.lcm2025.org/proceeding.pdf#page=284">https://www.lcm2025.org/proceeding.pdf#page=284</a>.
+</div>
+</div>
 </section>
 </section>
 

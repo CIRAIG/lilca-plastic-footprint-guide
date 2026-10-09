@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="libs/quarto-nav/quarto-nav.js"></script>
@@ -211,7 +230,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Accounting for the impact of plastic litter requires additional attention at both the LCI and LCIA stages. Although some LCIA methods, such as <a href="https://www.impactworldplus.org/" target="_blank">IMPACT World+ v2.1</a> and GLAM, now include CFs for physical effects on biota, the corresponding elementary flows for plastic litter emissions are generally not available or are not systematically populated in commonly used LCI databases. Consequently, even when practitioners use an LCIA method that includes these CFs, plastic emissions often need to be quantified separately before they can be characterized.</p>
+<p>Accounting for the impact of plastic litter requires additional attention at both the LCI and LCIA stages. Although some LCIA methods, such as <a href="https://www.impactworldplus.org/" target="_blank">IMPACT World+ v2.1</a> <span class="citation" data-cites="bulle2019">(<a href="references.html#ref-bulle2019" role="doc-biblioref">Bulle et al. 2019</a>)</span> and <a href="https://link.springer.com/article/10.1007/s11367-026-02607-2" target="_blank">GLAM</a> <span class="citation" data-cites="verones2026">(<a href="references.html#ref-verones2026" role="doc-biblioref">Verones et al. 2026</a>)</span>, now include CFs for physical effects on biota, the corresponding elementary flows for plastic litter emissions are generally not available or are not systematically populated in commonly used LCI databases. Consequently, even when practitioners use an LCIA method that includes these CFs, plastic emissions often need to be quantified separately before they can be characterized.</p>
 <p>In practice, this means that foreground data may need to be complemented with specific estimates of plastic leakage, while background datasets may not systematically include plastic emissions. Depending on the case study, practitioners may therefore need to perform additional calculations to estimate inventory flows, apply the CFs, or both. This additional work can be valuable, but it may not be necessary or significant for all assessments.</p>
 <p>Users should therefore consider the following screening questions before proceeding with a full assessment of contributions from plastic litter emissions. A single yes or no answer does not in itself justify an inclusion or exclusion of plastic emissions in a study. Instead, these questions are meant to stimulate the reasoning of the practitioner regarding the inclusion of plastic emissions.</p>
 <p><strong>Questions to guide the decision on including plastic emissions in impact assessment studies</strong>.</p>
@@ -291,6 +310,14 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-bulle2019" class="csl-entry" role="listitem">
+Bulle, Cécile, Manuele Margni, Laure Patouillard, et al. 2019. <span>“IMPACT World+: A Globally Regionalized Life Cycle Impact Assessment Method.”</span> <em>The International Journal of Life Cycle Assessment</em> 24 (9): 1653–74. <a href="https://doi.org/10.1007/s11367-019-01583-0">https://doi.org/10.1007/s11367-019-01583-0</a>.
+</div>
+<div id="ref-verones2026" class="csl-entry" role="listitem">
+Verones, Francesca, Valerio Barbarossa, Anne-Marie Boulay, et al. 2026. <span>“A Global Consensus Life Cycle Impact Assessment Method - GLAM: Impacts on Ecosystem Quality.”</span> <em>The International Journal of Life Cycle Assessment</em> 31 (10): 181. <a href="https://doi.org/10.1007/s11367-026-02748-4">https://doi.org/10.1007/s11367-026-02748-4</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
